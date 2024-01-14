@@ -1,0 +1,340 @@
+<header >
+  
+<div class="main-banner" id="top">
+  <video autoplay muted loop id="bg-video">
+      <source src="assets/images/gym-video.mp4" type="video/mp4" />
+  </video>
+
+  <div class="video-overlay header-text">
+      <div class="caption">
+          <h6 style="color: white; font-size: 150%; font-weight: 800; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">work harder, get stronger</h6>
+          <h2 style="color: white; font-size: 500%; font-weight: 800; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;" >EASY WITH OUR <em>GYM</em></h2>
+          <button class="btn btn-danger main-button">become a member</button>
+      </div>
+  </div>
+</div>
+<div class="blackout"></div>
+</header>
+<section id="about">
+<div class="container-fluid p-5">
+  <div class="row ">
+    <div class="col-md-5 pt-5">
+      <img class="w-100" src="../../assets/about.jpg" alt="">
+    </div>
+    <div class="col-md-7 pe-5 ps-5 pb-5">
+      <h5 style="text-transform:uppercase; color: red;">about us</h5>
+      <h1 style="font-weight: 800;" class="display-4">WELCOME TO GYMSTER</h1>
+      <h6 style="color: #222429; font-size: 150%; font-weight: 400; font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif">Diam dolor diam ipsum tempor sit. Clita erat ipsum et lorem stet no labore lorem sit clita duo justo magna dolore</h6>
+      <p>Nonumy erat diam duo labore clita. Sit magna ipsum dolor sed ea duo at ut. Tempor sit lorem sit magna ipsum duo. Sit eos dolor ut sea rebum, diam sea rebum lorem kasd ut ipsum dolor est ipsum. Et stet amet justo amet clita erat, ipsum sed at ipsum eirmod labore lorem.</p>
+      <div>
+        <div style="background-color:#222429 " class="row  pe-5 ps-5 pt-5">
+          <div id="bt1" (click)="onread1()" [class.bt]=" checkbtn1 == true" class="col-md-6 bt1">
+            <p >about us</p>
+          </div>
+          <div id="bt2" (click)="onread2()" [class.bt]=" checkbtn2 == true" ng-hide="checkbtn2" class="col-md-6 bt1">
+            <p  >why choose us</p>
+          </div>
+          <div *ngIf="checkbtn1==true" id="read" class="col-md-12 py-3">
+            <p style="color: antiquewhite;" class="lead">Tempor erat elitr at rebum at at clita aliquyam consetetur. Diam dolor diam ipsum et, tempor voluptua sit consetetur sit. Aliquyam diam amet diam et eos sadipscing labore. Clita erat ipsum et lorem et sit, sed stet no labore lorem sit. Sanctus clita duo justo et tempor consetetur takimata eirmod, dolores takimata consetetur invidunt magna dolores aliquyam dolores dolore. Amet erat amet et magna</p>
+          </div>
+          <div id="read" *ngIf="checkbtn2==true" class="col-md-12 py-3">
+            <p style="color: antiquewhite;"  class="lead"> Clita erat ipsum et lorem et sit, sed stet no labore lorem sit. Sanctus clita duo justo et tempor consetetur takimata eirmod, dolores takimata consetetur invidunt magna dolores aliquyam dolores dolore. Amet erat amet et magna</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</section>
+<section id="programs">
+  <div class="container py-5">
+    <div class="row">
+      <div class="col-md-6 offset-md-3">
+         <div class=" text-center">
+           <h1 style="text-transform: uppercase; font-weight: 700;">choose <span style="color: rgb(205, 93, 8);">program</span></h1>
+           <img src="../../assets/images/line-dec.png" alt="">
+           <p style="color: #454751;" class="py-3">Training Studio is free CSS template for gyms and fitness centers. You are allowed to use this layout for your business website.</p>
+         </div>
+      </div>
+    </div>
+    <div class="row ">
+      <div class="col-md-6 ">
+        <div class="item">
+        <div class="row p-4">
+          <div class="col-md-3 col-sm-3 ">
+            <img src="../../assets/images/features-first-icon.png" class="w-100" alt="">
+          </div>
+          <div class="col-md-9 col-sm-9">
+            <h4 style="font-weight: 600;" >Basic Fitness</h4>
+            <p style="color: #454751;">Fitness — from stretching, flexibility and aerobic exercise to strength training and sports nutrition.</p>
+            <p style="font-weight: 400; color:rgb(205, 93, 8) ;font-size: 120%;" class="cl">Discover More</p>
+          </div>
+        </div>
+      </div>
+      </div>
+      <div class="col-md-6 ">
+        <div class="item">
+        <div class="row p-4">
+          <div class="col-md-3 col-sm-3 ">
+            <img src="../../assets/images/features-first-icon.png" class="w-100" alt="">
+          </div>
+          <div class="col-md-9 col-sm-9">
+            <h4 style="font-weight: 600;" >Advanced Muscle Course</h4>
+            <p style="color: #454751;">Boost your muscle and strength gains by learning how to use drop sets, supersets, rest pause training.</p>
+            <p style="font-weight: 400; color:rgb(205, 93, 8) ;font-size: 120%;" class="cl">Discover More</p>
+          </div>
+        </div>
+      </div>
+      </div><div class="col-md-6 ">
+        <div class="item">
+        <div class="row p-4">
+          <div class="col-md-3 col-sm-3 ">
+            <img src="../../assets/images/features-first-icon.png" class="w-100" alt="">
+          </div>
+          <div class="col-md-9 col-sm-9">
+            <h4 style="font-weight: 600;" >New Gym Training</h4>
+            <p style="color: #454751;">Being new to the gym doesn't have to be intimidating and confusing.</p>
+            <p style="font-weight: 400; color:rgb(205, 93, 8) ;font-size: 120%;" class="cl">Discover More</p>
+          </div>
+        </div>
+      </div>
+      </div><div class="col-md-6 ">
+        <div class="item">
+        <div class="row p-4">
+          <div class="col-md-3 col-sm-3 ">
+            <img src="../../assets/images/features-first-icon.png" class="w-100" alt="">
+          </div>
+          <div class="col-md-9 col-sm-9">
+            <h4 style="font-weight: 600;" >Yoga Training</h4>
+            <p style="color: #454751;">Find and compare from the largest selection of Yoga Teacher Training courses worldwide.</p>
+            <p style="font-weight: 400; color:rgb(205, 93, 8) ;font-size: 120%;" class="cl">Discover More</p>
+          </div>
+        </div>
+      </div>
+      </div><div class="col-md-6 ">
+        <div class="item">
+        <div class="row p-4">
+          <div class="col-md-3 col-sm-3 ">
+            <img src="../../assets/images/features-first-icon.png" class="w-100" alt="">
+          </div>
+          <div class="col-md-9 col-sm-9">
+            <h4 style="font-weight: 600;" >Basic Muscle Course</h4>
+            <p style="color: #454751;">Goal. Strength, Hypertrophy, Fat Loss · Skill level. Beginner · Duration. 4 weeks · Days per week. 3-6 .</p>
+            <p style="font-weight: 400; color:rgb(205, 93, 8) ;font-size: 120%;" class="cl">Discover More</p>
+          </div>
+        </div>
+      </div>
+      </div><div class="col-md-6 ">
+        <div class="item">
+        <div class="row p-4">
+          <div class="col-md-3 col-sm-3 ">
+            <img src="../../assets/images/features-first-icon.png" class="w-100" alt="">
+          </div>
+          <div class="col-md-9 col-sm-9">
+            <h4 style="font-weight: 600;" >Body Building Course</h4>
+            <p style="color: #454751;">As a Bodybuilding specialist, you will learn training, recovery, motivation, and nutritional strategies to prepare you to work</p>
+            <p style="font-weight: 400; color:rgb(205, 93, 8) ;font-size: 120%;" class="cl">Discover More</p>
+          </div>
+        </div>
+       </div>
+      </div>
+      
+      
+    </div>
+  </div>
+</section>
+<section id="classes">
+  <div class="container py-5">
+    <div class="row">
+      <div class="col-md-6 offset-md-3">
+         <div class=" text-center">
+           <h1 style="text-transform: uppercase; font-weight: 700;">choose <span style="color: rgb(205, 93, 8);">classes</span></h1>
+           <img src="../../assets/images/line-dec.png" alt="">
+           <p style="color: #454751;" class="py-3">Nunc urna sem, laoreet ut metus id, aliquet consequat magna. Sed viverra ipsum dolor, ultricies fermentum massa consequat eu.</p>
+         </div>
+      </div>
+    
+      <div class="row justify-content-center">
+       <div class="col-md-4">
+        <div (click)="onclasses1()" class="box p-4 m-3 text-center">
+          <h4 [style.color]="checkbtn1Classes==true ?'red':'black'"><img src="../../assets/images/tabs-first-icon.png" alt=""> First Training Class</h4>
+        </div> 
+        <div (click)="onclasses2()" class="box p-4 m-3 text-center">
+          <h4 [style.color]="checkbtn2Classes==true ?'red':'black'"><img src="../../assets/images/tabs-first-icon.png" alt=""> Second Training Class</h4>
+        </div> 
+        <div (click)="onclasses3()" class="box p-4 m-3 text-center">
+          <h4 [style.color]="checkbtn3Classes==true ?'red':'black'"><img src="../../assets/images/tabs-first-icon.png" alt=""> Third Training Class</h4>
+        </div>
+        <div (click)="onclasses4()" class="box p-4 m-3 text-center">
+          <h4 [style.color]="checkbtn4Classes==true ?'red':'black'"><img src="../../assets/images/tabs-first-icon.png" alt=""> Fourth Training Class</h4>
+        </div>
+        <div class="box-bt p-3 m-3 text-center">
+          <h3>view all schedule</h3>
+        </div>
+       </div>
+       <div class="col-md-7 ">
+        <div *ngIf="checkbtn1Classes==true">
+        <article class="box-container p-5">
+          <img class="w-100" src="../../assets/images/training-image-01.jpg" alt="">
+          <h2 style="font-weight: 700;" class="pt-3">First Training Class</h2>
+          <p style="color: #454751;"> Phasellus convallis mauris sed elementum vulputate. Donec posuere leo sed dui eleifend hendrerit. Sed suscipit suscipit erat, sed vehicula ligula. Aliquam ut sem fermentum sem tincidunt lacinia gravida aliquam nunc. Morbi quis erat imperdiet, molestie nunc ut, accumsan diam.</p>
+        </article>
+        <button class="btn btn-main p-2 ms-5 ">view schedule</button> 
+      </div>
+      <div *ngIf="checkbtn2Classes==true">
+        <article class="box-container p-3">
+          <img class="w-100" src="../../assets/images/training-image-02.jpg" alt="">
+          <h2 style="font-weight: 700;" class="py-4">Second Training Class</h2>
+          <p style="color: #454751;"> Integer dapibus, est vel dapibus mattis, sem mauris luctus leo, ac pulvinar quam tortor a velit. Praesent ultrices erat ante, in ultricies augue ultricies faucibus. Nam tellus nibh, ullamcorper at mattis non, rhoncus sed massa. Cras quis pulvinar eros. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
+        </article>
+        <button class="btn btn-main p-2 ms-3">view schedule</button> 
+      </div>
+      <div *ngIf="checkbtn3Classes==true">
+        <article class="box-container p-3">
+          <img class="w-100" src="../../assets/images/training-image-03.jpg" alt="">
+          <h2 style="font-weight: 700;" class="py-4">Third Training Class</h2>
+          <p style="color: #454751;"> Fusce laoreet malesuada rhoncus. Donec ultricies diam tortor, id auctor neque posuere sit amet. Aliquam pharetra, augue vel cursus porta, nisi tortor vulputate sapien, id scelerisque felis magna id felis. Proin neque metus, pellentesque pharetra semper vel, accumsan a neque.</p>
+        </article>
+        <button class="btn btn-main p-2 ms-3">view schedule</button> 
+      </div>
+      <div *ngIf="checkbtn4Classes==true">
+        <article class="box-container p-3">
+          <img class="w-100" src="../../assets/images/training-image-04.jpg" alt="">
+          <h2 style="font-weight: 700;" class="py-4">Fourth Training Class</h2>
+          <p style="color: #454751;"> Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Aenean ultrices elementum odio ac tempus. Etiam eleifend orci lectus, eget venenatis ipsum commodo et.</p>
+        </article>
+        <button class="btn btn-main p-2 ms-3">view schedule</button> 
+       </div>
+      </div>
+    
+      </div>
+    </div>
+</div>
+</section>
+<section id="trainers">
+  <div class="container py-5">
+    <div class="row">
+      <div class="col-md-6 offset-md-3">
+         <div class=" text-center">
+           <h1 style="text-transform: uppercase; font-weight: 700;">EXPERT <span style="color: rgb(205, 93, 8);">TRAINERS</span></h1>
+           <img src="../../assets/images/line-dec.png" alt="">
+           <p style="color: #454751;" class="py-3">Nunc urna sem, laoreet ut metus id, aliquet consequat magna. Sed viverra ipsum dolor, ultricies fermentum massa consequat eu.</p>
+         </div> 
+    </div>
+    </div>
+    <div class="container">
+      
+    <div class="row justify-content-center p-5">
+       <div class="col-md-4">
+        <div class="trainer p-4">
+          <img class="w-100" src="../../assets/images/first-trainer.jpg" alt="">
+           <h6 style="color: tomato;" class=" pt-3">Strength Trainer</h6>
+           <h4>Bret D. Bowers</h4>
+           <p>Bitters cliche tattooed 8-bit distillery mustache. Keytar succulents gluten-free vegan church-key pour-over seitan flannel.</p>
+           <div class="d-inline-flex align-items-center py-2">
+            <a class="btn btn-light btn-square rounded-circle me-2" href="https://web.facebook.com/?locale=ar_AR&_rdc=1&_rdr">
+                <i class="fab fa-facebook-f"></i>
+            </a>
+            <a class="btn btn-light btn-square rounded-circle me-2" href="https://web.facebook.com/?locale=ar_AR&_rdc=1&_rdr">
+                <i class="fab fa-twitter"></i>
+            </a>
+            <a class="btn btn-light btn-square rounded-circle me-2" href="https://web.facebook.com/?locale=ar_AR&_rdc=1&_rdr">
+                <i class="fab fa-linkedin-in"></i>
+            </a>
+            <a class="btn btn-light btn-square rounded-circle me-2" href="https://web.facebook.com/?locale=ar_AR&_rdc=1&_rdr">
+                <i class="fab fa-instagram"></i>
+              </a>
+              </div>
+          </div>
+       </div>
+       <div class="col-md-4">
+        <div class="trainer p-4">
+          <img class="w-100" src="../../assets/images/second-trainer.jpg" alt="">
+           <h6 style="color: tomato;" class=" pt-3">Muscle Trainer</h6>
+           <h4>Hector T. Daigl</h4>
+           <p>Bitters cliche tattooed 8-bit distillery mustache. Keytar succulents gluten-free vegan church-key pour-over seitan flannel.</p>
+           <div class="d-inline-flex align-items-center py-2">
+            <a class="btn btn-light btn-square rounded-circle me-2" href="https://web.facebook.com/?locale=ar_AR&_rdc=1&_rdr">
+                <i class="fab fa-facebook-f"></i>
+            </a>
+            <a class="btn btn-light btn-square rounded-circle me-2" href="https://web.facebook.com/?locale=ar_AR&_rdc=1&_rdr">
+                <i class="fab fa-twitter"></i>
+            </a>
+            <a class="btn btn-light btn-square rounded-circle me-2" href="https://web.facebook.com/?locale=ar_AR&_rdc=1&_rdr">
+                <i class="fab fa-linkedin-in"></i>
+            </a>
+            <a class="btn btn-light btn-square rounded-circle me-2" href="https://web.facebook.com/?locale=ar_AR&_rdc=1&_rdr">
+                <i class="fab fa-instagram"></i>
+              </a>
+              </div>
+          </div>
+       </div>
+       <div class="col-md-4">
+        <div class="trainer p-4">
+          <img class="w-100" src="../../assets/images/third-trainer.jpg" alt="">
+           <h6 style="color: tomato;" class=" pt-3">Power Trainer</h6>
+           <h4>Paul D. Newman</h4>
+           <p>Bitters cliche tattooed 8-bit distillery mustache. Keytar succulents gluten-free vegan church-key pour-over seitan flannel.</p>
+           <div class="d-inline-flex align-items-center py-2">
+            <a class="btn btn-light btn-square rounded-circle me-2" href="https://web.facebook.com/?locale=ar_AR&_rdc=1&_rdr">
+                <i class="fab fa-facebook-f"></i>
+            </a>
+            <a class="btn btn-light btn-square rounded-circle me-2" href="https://web.facebook.com/?locale=ar_AR&_rdc=1&_rdr">
+                <i class="fab fa-twitter"></i>
+            </a>
+            <a class="btn btn-light btn-square rounded-circle me-2" href="https://web.facebook.com/?locale=ar_AR&_rdc=1&_rdr">
+                <i class="fab fa-linkedin-in"></i>
+            </a>
+            <a class="btn btn-light btn-square rounded-circle me-2" href="https://web.facebook.com/?locale=ar_AR&_rdc=1&_rdr">
+                <i class="fab fa-instagram"></i>
+              </a>
+              </div>
+          </div>
+       </div>
+      </div>
+    </div>
+  </div>
+
+</section>
+<section id="contact">
+  <div class="container py-5">
+      <div class="text-center">
+         <h1 style="text-transform: uppercase; font-weight: 700;">Connect<span style="color: rgb(205, 93, 8);"> with us </span></h1>
+         <img src="../../assets/images/line-dec.png" alt="">
+
+      </div>
+      <div class="row p-5">
+
+      <div style="background-image: url(../../assets/images/schedule-bg.jpg);" class="col-md-7">
+        
+          <form [formGroup]="registerForm" (ngSubmit)="sendMessage(registerForm)" style="background-color: white; border-radius: 5px;" class="row  m-5 p-5">
+            <div   class="col-md-6 py-3">
+              <input [class.is-invalid]='registerForm.get("name")?.invalid==true && registerForm.get("name")?.touched==true' placeholder="Your Name" formControlName="name" class="form-control" type="text">
+             <!-- <span *ngIf='registerForm.get("name")?.invalid==true && registerForm.get("name")?.touched==true' style="color: red;" class="d-block p-2">you are not write your name
+              </span>-->
+            </div>
+            <div class="col-md-6 py-3">
+              <input [class.is-invalid]='registerForm.get("mail")?.invalid==true && registerForm.get("mail")?.touched==true' placeholder="Your Email ex:xxx@gymstar" formControlName="mail" class="form-control" type="text">
+              <span *ngIf='registerForm.get("mail")?.invalid==true && registerForm.get("mail")?.touched==true' style="color: red;" class="d-block p-2">must be ex:xxx&#64;gymstar
+              </span>
+            </div>
+            <div class="col-md-12 py-3">
+              <input [class.is-invalid]='registerForm.get("supject")?.invalid==true && registerForm.get("supject")?.touched==true' placeholder="What Is Your Topic" formControlName="supject" class="form-control" type="text">
+            </div>
+            <div class="col-md-12 py-3">
+              <textarea [class.is-invalid]='registerForm.get("message")?.invalid==true && registerForm.get("message")?.touched==true' placeholder="Message" style="height: 150px;" class="form-control" formControlName="message" ></textarea>
+            </div>
+            <div>
+            <button  [disabled]="registerForm.invalid==true" type="submit" class="btn btn-danger"> send message</button>
+          </div>
+          </form>
+      </div>
+      <div style="position: relative;" class="col-md-5 ">
+        <div >
+        <iframe style="border:0; position: absolute; top: 0; bottom: 0; right: 0;left: 0; width: 100%; height: 100%;" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3455.3570950417907!2d31.214244299999997!3d29.997901199999994!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x145846ff96d97c57%3A0xccba4d52d192828a!2z2KfZhNio2K3YsSDYp9mE2KPYudi42YXYjCDZgtiz2YUg2KfZhNi52YXYsdin2YbZitip2Iwg2KfZhNis2YrYstip!5e0!3m2!1sar!2seg!4v1667747724485!5m2!1sar!2seg"   allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+    </div>
+    </div>
+  </div>
+
+</section>
