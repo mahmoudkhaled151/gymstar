@@ -7,6 +7,7 @@ import {AuthService }from '../auth.service'
   styleUrl: './register.component.css'
 })
 export class RegisterComponent {
+
   /*checkbox values*/
   // selectedCheckBoxList:string[] = [];
   // techStackList: any = [
@@ -52,7 +53,7 @@ export class RegisterComponent {
       console.log("mahmoud");
     }
   }
-  sendData(formData)
+  sendMessage(formData : any)
   {
     if (formData.valid==true)
     {
