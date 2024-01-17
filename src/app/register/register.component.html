@@ -55,8 +55,8 @@
                             <input [class.is-invalid]='(registerForm.get("repassword")?.touched==true && registerForm.get("repassword")?.invalid==true) 'formControlName="repassword" type="password" placeholder="Confirm" class="form-control w-50">
                             <span style="color: red;" *ngIf='registerForm.get("repassword")?.touched==true && (registerForm.get("password")?.value!=registerForm.get("repassword")?.value)'>password is not matched</span>
                             
-                            <h4 style="color: red; font-family: 'El Messiri', sans-serif; font-weight: 700; font-size: 150%; text-shadow: -1px 1px 1px rgba(128, 0, 0, .8);" class="mt-4 ">At what times during the day would you prefer to train?</h4>
-                            <h5 *ngFor="let tech of techStackList" style="color: white; font-family: 'El Messiri', sans-serif; font-weight: 400;" class="mx-3"><input type="checkbox" [value]="tech.code" (change)="controlOnChange($event)"  > {{tech.name}}</h5 >
+                            <!-- <h4 style="color: red; font-family: 'El Messiri', sans-serif; font-weight: 700; font-size: 150%; text-shadow: -1px 1px 1px rgba(128, 0, 0, .8);" class="mt-4 ">At what times during the day would you prefer to train?</h4> -->
+                            <!-- <h5 *ngFor="let tech of techStackList" style="color: white; font-family: 'El Messiri', sans-serif; font-weight: 400;" class="mx-3"><input type="checkbox" [value]="tech.code" (change)="controlOnChange($event)"  > {{tech.name}}</h5 > -->
                             <div class="text-center">
                             <div style="width: 80%; height: 1px; background-color: red;" class="mt-4 d-inline-block">
                             </div>

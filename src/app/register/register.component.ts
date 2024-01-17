@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { AbstractControl, FormArray, FormBuilder, FormControl , FormGroup , Validators } from '@angular/forms';
-
+import {AuthService }from '../auth.service'
 @Component({
   selector: 'app-register',
   templateUrl: './register.component.html',
@@ -8,31 +8,32 @@ import { AbstractControl, FormArray, FormBuilder, FormControl , FormGroup , Vali
 })
 export class RegisterComponent {
   /*checkbox values*/
-  selectedCheckBoxList:string[] = [];
-  techStackList: any = [
-    { id: 1, name: 'Morning', code :   'Morning' },
-    { id: 2, name: 'Mid-Day', code :   'Mid-Day' },
-    { id: 3, name: 'Afternoon', code : 'Afternoon' },
-    { id: 4, name: 'Evening', code :   'Evening' },
-  ];
-  form:FormGroup;
-  constructor(private formBuilder: FormBuilder) {
-    this.form = this.formBuilder.group({
-      technology: this.formBuilder.array([], [Validators.required])
-    })
-  }
-  controlOnChange(e :any) {
-    const technologies: FormArray = this.form.get('technology') as FormArray;
+  // selectedCheckBoxList:string[] = [];
+  // techStackList: any = [
+  //   { id: 1, name: 'Morning', code :   'Morning' },
+  //   { id: 2, name: 'Mid-Day', code :   'Mid-Day' },
+  //   { id: 3, name: 'Afternoon', code : 'Afternoon' },
+  //   { id: 4, name: 'Evening', code :   'Evening' },
+  // ];
+  // form:FormGroup;
+  // constructor(private formBuilder: FormBuilder) {
+  //   this.form = this.formBuilder.group({
+  //     technology: this.formBuilder.array([], [Validators.required])
+  //   })
+  // }
+  // controlOnChange(e :any) {
+  //   const technologies: FormArray = this.form.get('technology') as FormArray;
   
-    if (e.target.checked) {
-      technologies.push(new FormControl(e.target.value));
-      this.selectedCheckBoxList.push(e.target.value);
-    } else {
-       const index = technologies.controls.findIndex(technology => technology.value === e.target.value);
-       technologies.removeAt(index);
-    }
-  }
+  //   if (e.target.checked) {
+  //     technologies.push(new FormControl(e.target.value));
+  //     this.selectedCheckBoxList.push(e.target.value);
+  //   } else {
+  //      const index = technologies.controls.findIndex(technology => technology.value === e.target.value);
+  //      technologies.removeAt(index);
+  //   }
+  // }
  /*end*/
+ constructor( public _AuthService:AuthService){}
   registerForm:FormGroup=new FormGroup({
     'fname': new FormControl(null,[Validators.required ]),
     'lname': new FormControl(null,[Validators.required ]),
@@ -51,12 +52,29 @@ export class RegisterComponent {
       console.log("mahmoud");
     }
   }
+  sendData(formData)
+  {
+    if (formData.valid==true)
+    {
+      this._AuthService.register(formData.value).subscribe(data =>{
+        if (data.message == 'success')
+        {
+
+        }
+        else 
+        {
+           window.alert(data.message)
+        }
+      });
+
+    }
+  }
 
   
-  sendMessage(formData: any)
-  {
-    console.log(formData.value);
-    console.log(this.selectedCheckBoxList)
+  // sendMessage(formData: any)
+  // {
+  //   console.log(formData.value);
+  //   console.log(this.selectedCheckBoxList)
     
-  }  
+  // }  
 }
