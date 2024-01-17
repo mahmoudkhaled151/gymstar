@@ -10,22 +10,25 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ReactiveFormsModule } from '@angular/forms';
 import { RegisterComponent } from './register/register.component';
 import { PageComponent } from './page/page.component';
+import { HttpClientModule } from '@angular/common/http';
+import { AuthService } from './auth.service';
 @NgModule({
   declarations: [
     AppComponent,
     NavbarComponent,
     HomeComponent,
     RegisterComponent,
-    PageComponent , 
-    
+    PageComponent ,
+
 
   ],
   imports: [
     BrowserModule,
     AppRoutingModule ,
-    BrowserAnimationsModule , 
-    ReactiveFormsModule , 
-    FormsModule
+    BrowserAnimationsModule ,
+    ReactiveFormsModule ,
+    FormsModule,
+    HttpClientModule
 
   ],
   providers: [

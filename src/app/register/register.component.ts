@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { AbstractControl, FormArray, FormBuilder, FormControl , FormGroup , Validators } from '@angular/forms';
 import {AuthService }from '../auth.service'
+import { error } from 'console';
 @Component({
   selector: 'app-register',
   templateUrl: './register.component.html',
@@ -24,7 +25,7 @@ export class RegisterComponent {
   // }
   // controlOnChange(e :any) {
   //   const technologies: FormArray = this.form.get('technology') as FormArray;
-  
+
   //   if (e.target.checked) {
   //     technologies.push(new FormControl(e.target.value));
   //     this.selectedCheckBoxList.push(e.target.value);
@@ -53,29 +54,27 @@ export class RegisterComponent {
       console.log("mahmoud");
     }
   }
-  sendMessage(formData : any)
-  {
-    if (formData.valid==true)
-    {
-      this._AuthService.register(formData.value).subscribe(data =>{
-        if (data.message == 'success')
-        {
 
+  sendMessage(formData: any) {
+    if (formData.valid == true) {
+      this._AuthService.register(formData.value).subscribe(
+        data => {
+          if (data.status == true) {
+            console.log("Registration success",data.message)
+            window.alert(data.message);
+          } else {
+            window.alert('Registration failed. Please try again.');
+          }
+        },
+        err => {
+          window.alert(`Error during registration: ${err.error.message}`);
         }
-        else 
-        {
-           window.alert(data.message)
-        }
-      });
-
-    }
+      )}
   }
-
-  
   // sendMessage(formData: any)
   // {
   //   console.log(formData.value);
   //   console.log(this.selectedCheckBoxList)
-    
-  // }  
+
+  // }
 }
