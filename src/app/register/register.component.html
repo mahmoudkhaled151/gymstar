@@ -12,6 +12,8 @@
                         <h6 class="fontstyleheader">Welcome To Registration For <span style="color: red;"> GYMSTAR</span></h6>
                     </div>
                     <form [formGroup]="registerForm" (ngSubmit)="sendMessage(registerForm)" >
+                        <span *ngIf="messageError" style="color: red; ">{{messageError}}</span>
+
                         <h6  class="mt-4 fontstyle">Full Name</h6>
                         <div class="row center">
                             <div class="col-md-6">

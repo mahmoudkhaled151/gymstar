@@ -56,7 +56,7 @@ export class RegisterComponent {
       console.log("mahmoud");
     }
   }
-  
+  messageError:any;
   sendMessage(formData: any) {
     if (formData.valid == true) {
       this._AuthService.register(formData.value).subscribe(
@@ -70,7 +70,8 @@ export class RegisterComponent {
           }
         },
         err => {
-          window.alert(`Error during registration: ${err.error.message}`);
+          // window.alert(`Error during registration: ${err.error.message}`);
+          this.messageError=err.error.message;
         }
       )}
   }
