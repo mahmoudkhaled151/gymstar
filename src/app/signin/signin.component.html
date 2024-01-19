@@ -1,0 +1,37 @@
+<section class="coverAll" style="z-index: -1;">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    
+    91
+    <div class="cover">
+     <div class="blackOut">
+        <div class="container ">
+            <div class="row center">
+                <div class="col-md-4 mt-5 ">
+                    <div class="blur p-5 m-5 ">
+                        <div class="text-center">
+                            <h6 class="fontstyleheader">Login For <span style="color: red;"> GYMSTAR</span></h6>
+                        </div>
+                        <form [formGroup]="signin" (ngSubmit)="sendMessage(signin)"  >
+                            <span *ngIf="messageError" style="color: red; ">{{messageError}}</span>
+                            <input style="font-size: 70%;" [class.is-invalid]='signin.get("Email")?.invalid==true && signin.get("Email")?.touched==true' formControlName="Email" type="email" placeholder="User Name/Email" class="form-control w-100 mt-5 mb-3 ">
+                            <input style="font-size: 70%;" [class.is-invalid]='signin.get("password")?.invalid==true && signin.get("password")?.touched==true' formControlName="password" type="password"  placeholder="Password" class="form-control">
+                            <button [disabled]="signin.invalid==true " style="padding: 1%; font-size: 90%;"  class="btn btn-danger w-100 mt-3" type="submit">Login Now</button>
+
+                            <p class="py-1" style=" font-size: 70%; color: white;">Don't have an account? <a href="/register" style="color: darkolivegreen;"> sign up</a></p>    
+                        </form>
+                        
+                    </div>
+                </div>
+               
+    
+            </div>
+    
+        </div>
+     </div>
+    </div>
+    </section>
+    
+    
+    
+    
+    

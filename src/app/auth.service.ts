@@ -11,6 +11,10 @@ export class AuthService {
   constructor(public _HttpClient :HttpClient) { }
   register(data: any): Observable<any>
   {
+     return this._HttpClient.post('http://localhost:3000/api-store-book/users/add' , data);
+  }
+  sign(data: any): Observable<any>
+  {
      return this._HttpClient.post('http://localhost:3000/api-store-book/users/add' , data)
   }
 }

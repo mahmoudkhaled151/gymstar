@@ -4,10 +4,12 @@
         "checkess",
         "checkpassword",
         "fontawesome",
+        "fontstyleheader",
         "fortawesome",
         "onclasses",
         "onread",
         "repassword",
+        "signin",
         "supject"
     ]
 }

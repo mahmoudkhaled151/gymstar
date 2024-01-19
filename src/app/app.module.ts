@@ -12,13 +12,15 @@ import { RegisterComponent } from './register/register.component';
 import { PageComponent } from './page/page.component';
 import { HttpClientModule } from '@angular/common/http';
 import { AuthService } from './auth.service';
+import { SigninComponent } from './signin/signin.component';
 @NgModule({
   declarations: [
     AppComponent,
     NavbarComponent,
     HomeComponent,
     RegisterComponent,
-    PageComponent ,
+    PageComponent,
+    SigninComponent ,
 
 
   ],

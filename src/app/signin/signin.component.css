@@ -11,6 +11,10 @@
     bottom: 0;
     overflow: scroll;
 }
+
+
+  
+
 .cover
 {
     position: relative;
@@ -29,7 +33,7 @@
 .blur
 {
     
-    background-color: rgpa(0,0,0,.2);
+    background-color: rgba(0,0,0,.4);
     border-radius: 10px;
     border: solid red 1px;
     

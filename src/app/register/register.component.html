@@ -6,53 +6,58 @@
  <div class="blackOut">
     <div class="container ">
         <div class="row center">
-            <!-- <img src="../../assets/" alt=""> -->
-            <div class="col-md-8 ">
+            <div class="col-md-6 ">
                 <div class="blur p-5 m-5 ">
                     <div class="text-center">
-                        <h3 style="color: aliceblue; font-family: 'El Messiri', sans-serif; font-weight: 800;">Welcome To Registration For <span style="color: red;"> GYMSTAR</span></h3>
-                        <div style="width: 80%; height: 1px; background-color: red;" class="mt-4 d-inline-block"></div>  
+                        <h6 class="fontstyleheader">Welcome To Registration For <span style="color: red;"> GYMSTAR</span></h6>
                     </div>
                     <form [formGroup]="registerForm" (ngSubmit)="sendMessage(registerForm)" >
-                        <h5 style="color: red; font-family: 'El Messiri', sans-serif; font-weight: 700; font-size: 150%; text-shadow: -1px 1px 1px rgba(128, 0, 0, .8);" class="mt-3 mb-3">Full Name</h5>
+                        <h6  class="mt-4 fontstyle">Full Name</h6>
                         <div class="row center">
                             <div class="col-md-6">
-                                <input [class.is-invalid]='registerForm.get("fname")?.invalid==true && registerForm.get("fname")?.touched==true' placeholder="First Name" formControlName="fname" class="form-control" type="text">
+                                <input style="font-size: 70%;" [class.is-invalid]='registerForm.get("fname")?.invalid==true && registerForm.get("fname")?.touched==true' placeholder="First Name" formControlName="fname" class="form-control" type="text">
                             </div>
                             <div class="col-md-6">
-                                <input [class.is-invalid]='registerForm.get("lname")?.invalid==true && registerForm.get("lname")?.touched==true' placeholder="Last Name" formControlName="lname" class="form-control" type="text">
+                                <input style="font-size: 70%;" [class.is-invalid]='registerForm.get("lname")?.invalid==true && registerForm.get("lname")?.touched==true' placeholder="Last Name" formControlName="lname" class="form-control" type="text">
                             </div>
+                            
+                            
                         </div>
+                        <h6  class="mt-3 fontstyle">Enter User Name</h6>
+                            <input style="font-size: 70%;" [class.is-invalid]='registerForm.get("userName")?.invalid==true && registerForm.get("userName")?.touched==true' formControlName="userName" type="text" placeholder="user name" class="form-control w-50">
                         <div class="row">
-                            <h4 style="color: red; font-family: 'El Messiri', sans-serif; font-weight: 700; font-size: 150%; text-shadow: -1px 1px 1px rgba(128, 0, 0, .8);" class="mt-4 ">Gender</h4>
-                          <div class="col-md-6"> 
-                             <h5 style="color: white; font-family: 'El Messiri', sans-serif; font-weight: 400;" class="mx-3"><input type="radio" formControlName="gender" name="gender" value="male" > Male</h5>
+                            <h6  class="mt-3 fontstyle">Gender</h6>
+                          <div class="col-md-4 mx-3"> 
+                             <input  type="radio" id="Male" formControlName="gender" value="Male" checked />
+                                  <label style="font-size: 90%;  color: aqua;" for="Male">Male</label>
+                              
                           </div>
-                        <div class="col-md-6">
-                            <h5 style="color: white; font-family: 'El Messiri', sans-serif; font-weight: 400;" class="mx-3"><input type="radio" formControlName="gender" name="gender" value="female" > Female</h5>
+                        <div class="col-md-4 mx-3">
+                            <input  type="radio" id="Female" formControlName="gender" value="Female" checked />
+                            <label style="font-size: 90%; color: aqua;" for="Female">Female</label>                   
+                             </div>
                         </div>
-                        </div>
-                         <h4 style="color: red; font-family: 'El Messiri', sans-serif; font-weight: 700; font-size: 150%; text-shadow: -1px 1px 1px rgba(128, 0, 0, .8);" class="mt-4 ">Date of Birth</h4>
+                         <h6  class="mt-3 fontstyle">Date of Birth</h6>
                             <div class="row ">
                             <div class="col-md-4">
-                              <input [class.is-invalid]='registerForm.get("day")?.invalid==true && registerForm.get("day")?.touched==true' formControlName="day" placeholder="day" type="number" class="form-control" min="1" max="31" >
+                              <input style="font-size: 70%;" [class.is-invalid]='registerForm.get("day")?.invalid==true && registerForm.get("day")?.touched==true' formControlName="day" placeholder="day" type="number" class="form-control" min="1" max="31" >
                             </div>
                             <div class="col-md-4">
-                                <input [class.is-invalid]='registerForm.get("month")?.invalid==true && registerForm.get("month")?.touched==true' formControlName="month" placeholder="month" type="number" class="form-control" min="1" max="12">
+                                <input style="font-size: 70%;" [class.is-invalid]='registerForm.get("month")?.invalid==true && registerForm.get("month")?.touched==true' formControlName="month" placeholder="month" type="number" class="form-control" min="1" max="12">
                               </div>
                               <div  class="col-md-4">
-                                <input [class.is-invalid]='registerForm.get("year")?.invalid==true && registerForm.get("year")?.touched==true' formControlName="year" placeholder="year" type="number" class="form-control"  >
+                                <input style="font-size: 70%;" [class.is-invalid]='registerForm.get("year")?.invalid==true && registerForm.get("year")?.touched==true' formControlName="year" placeholder="year" type="number" class="form-control"  >
                               </div>
                             </div>
-                            <h4 style="color: red; font-family: 'El Messiri', sans-serif; font-weight: 700; font-size: 150%; text-shadow: -1px 1px 1px rgba(128, 0, 0, .8);" class="mt-4 ">Enter Your Email</h4>
-                            <input [class.is-invalid]='registerForm.get("Email")?.invalid==true && registerForm.get("Email")?.touched==true' formControlName="Email" type="email" placeholder="mmmm@gmail.com" class="form-control w-50">
+                            <h6  class="mt-3 fontstyle">Enter Your Email</h6>
+                            <input style="font-size: 70%;" [class.is-invalid]='registerForm.get("Email")?.invalid==true && registerForm.get("Email")?.touched==true' formControlName="Email" type="email" placeholder="mmmm@gmail.com" class="form-control w-50">
                             
-                            <h4 style="color: red; font-family: 'El Messiri', sans-serif; font-weight: 700; font-size: 150%; text-shadow: -1px 1px 1px rgba(128, 0, 0, .8);" class="mt-4 ">Enter Your Password</h4>
-                            <input [class.is-invalid]='registerForm.get("password")?.invalid==true && registerForm.get("password")?.touched==true' formControlName="password" type="password"  placeholder="Password" class="form-control w-50">
+                            <h6  class="mt-3 fontstyle">Enter Your Password</h6>
+                            <input style="font-size: 70%;" [class.is-invalid]='registerForm.get("password")?.invalid==true && registerForm.get("password")?.touched==true' formControlName="password" type="password"  placeholder="Password" class="form-control w-50">
                             <span style="color: red;" *ngIf='registerForm.get("password")?.touched==true && (registerForm.get("password")?.invalid==true)'>Password must be start at least uppercase character</span>
                             
-                            <h4 style="color: red; font-family: 'El Messiri', sans-serif; font-weight: 700; font-size: 150%; text-shadow: -1px 1px 1px rgba(128, 0, 0, .8);" class="mt-4 ">Confirm Your Password</h4>
-                            <input [class.is-invalid]='(registerForm.get("repassword")?.touched==true && registerForm.get("repassword")?.invalid==true) 'formControlName="repassword" type="password" placeholder="Confirm" class="form-control w-50">
+                            <h6  class="mt-3 fontstyle">Confirm Your Password</h6>
+                            <input style="font-size: 70%;" [class.is-invalid]='(registerForm.get("repassword")?.touched==true && registerForm.get("repassword")?.invalid==true) 'formControlName="repassword" type="password" placeholder="Confirm" class="form-control w-50">
                             <span style="color: red;" *ngIf='registerForm.get("repassword")?.touched==true && (registerForm.get("password")?.value!=registerForm.get("repassword")?.value)'>password is not matched</span>
                             
                             <!-- <h4 style="color: red; font-family: 'El Messiri', sans-serif; font-weight: 700; font-size: 150%; text-shadow: -1px 1px 1px rgba(128, 0, 0, .8);" class="mt-4 ">At what times during the day would you prefer to train?</h4> -->
@@ -60,8 +65,8 @@
                             <div class="text-center">
                             <div style="width: 80%; height: 1px; background-color: red;" class="mt-4 d-inline-block">
                             </div>
-                        <button [disabled]="registerForm.invalid==true " style="font-size: 120%;"  class="btn btn-danger pe-5 ps-5 m-4" type="submit">submit</button>
-                    </div>
+                            <button [disabled]="registerForm.invalid==true "  class="btn btn-dark pe-5 ps-5 m-4" type="submit">submit</button>
+                        </div>
                         </form>
                     
                 </div>
