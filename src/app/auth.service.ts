@@ -15,6 +15,6 @@ export class AuthService {
   }
   sign(data: any): Observable<any>
   {
-     return this._HttpClient.post('http://localhost:3000/api-store-book/users/add' , data)
+     return this._HttpClient.post('http://localhost:3000/api-store-book/users/login' , data)
   }
 }

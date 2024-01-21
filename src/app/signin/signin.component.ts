@@ -11,7 +11,7 @@ import { Router } from '@angular/router';
 export class SigninComponent {
   constructor( public _AuthService:AuthService , public _Router:Router ){}
   signin:FormGroup=new FormGroup({
-   
+
     'Email': new FormControl(null,[Validators.required ]),
     'password': new FormControl(null, Validators.required),
   });
@@ -19,11 +19,11 @@ export class SigninComponent {
 
   sendMessage(formData: any) {
     if (formData.valid == true) {
-      this._AuthService.register(formData.value).subscribe(
+      this._AuthService.sign(formData.value).subscribe(
         data => {
           if (data.status == true) {
             // console.log("Registration success",data.message)
-            // window.alert(data.message);
+            window.alert(data.message);
             this._Router.navigate(['/home']);
           } else {
             window.alert('Registration failed. Please try again.');
