@@ -54,3 +54,11 @@ padding-left:15%;
     display: block;
     
 }
+.detail
+{
+    width: 80%;    
+    position: absolute;
+    bottom:-15%;
+    right: -5%;
+    background-color: white;
+}

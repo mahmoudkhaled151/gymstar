@@ -6,5 +6,9 @@ import { Component } from '@angular/core';
   styleUrl: './page.component.css'
 })
 export class PageComponent {
-
+more:Boolean=false;
+readMore()
+{
+this.more=true;
+}
 }

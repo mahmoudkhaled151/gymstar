@@ -23,31 +23,30 @@
     </div>
     <div class="col-md-7 pe-5 ps-5 pb-5">
       <h5 style="text-transform:uppercase; color: red;">about us</h5>
-      <h1 style="font-weight: 800;" class="display-4">WELCOME TO GYMSTER</h1>
-      <h6 style="color: #222429; font-size: 150%; font-weight: 400; font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif">Diam dolor diam ipsum tempor sit. Clita erat ipsum et lorem stet no labore lorem sit clita duo justo magna dolore</h6>
-      <p>Nonumy erat diam duo labore clita. Sit magna ipsum dolor sed ea duo at ut. Tempor sit lorem sit magna ipsum duo. Sit eos dolor ut sea rebum, diam sea rebum lorem kasd ut ipsum dolor est ipsum. Et stet amet justo amet clita erat, ipsum sed at ipsum eirmod labore lorem.</p>
-      <div>
-        <div style="background-color:#222429 " class="row  pe-5 ps-5 pt-5">
+      <h1 style="font-weight: 900;" class="display-5">WELCOME TO GYMSTER</h1>
+      <h6 style="color: #3a3d46; font-size: 100%; font-weight: 400; font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif">Diam dolor diam ipsum tempor sit. Clita erat ipsum et lorem stet no labore lorem sit clita duo justo magna dolore</h6>
+      <p style="font-size: 80%;">Nonumy erat diam duo labore clita. Sit magna ipsum dolor sed ea duo at ut. Tempor sit lorem sit magna ipsum duo. Sit eos dolor ut sea rebum, diam sea rebum lorem kasd ut ipsum dolor est ipsum. Et stet amet justo amet clita erat, ipsum sed at ipsum eirmod labore lorem.</p>
+        <div style="background-color:#222429;" class="row  pe-5 ps-5 pt-5">
           <div id="bt1" (click)="onread1()" [class.bt]=" checkbtn1 == true" class="col-md-6 bt1">
-            <p >about us</p>
+            <p style="font-size: 80%;   position: relative;top: 50%;transform: translate(0, -50%);">about us</p>
           </div>
           <div id="bt2" (click)="onread2()" [class.bt]=" checkbtn2 == true" ng-hide="checkbtn2" class="col-md-6 bt1">
-            <p  >why choose us</p>
+            <p style="font-size: 80%;   position: relative;top: 50%;transform: translate(0, -50%);" >why choose us</p>
           </div>
           <div *ngIf="checkbtn1==true" id="read" class="col-md-12 py-3">
-            <p style="color: antiquewhite;" class="lead">Tempor erat elitr at rebum at at clita aliquyam consetetur. Diam dolor diam ipsum et, tempor voluptua sit consetetur sit. Aliquyam diam amet diam et eos sadipscing labore. Clita erat ipsum et lorem et sit, sed stet no labore lorem sit. Sanctus clita duo justo et tempor consetetur takimata eirmod, dolores takimata consetetur invidunt magna dolores aliquyam dolores dolore. Amet erat amet et magna</p>
+            <p style="color: antiquewhite; font-size: 90%;" class="lead">Tempor erat elitr at rebum at at clita aliquyam consetetur. Diam dolor diam ipsum et, tempor voluptua sit consetetur sit. Aliquyam diam amet diam et eos sadipscing labore. Clita erat ipsum et lorem et sit, sed stet no labore lorem sit. Sanctus clita duo justo et tempor consetetur takimata eirmod, dolores takimata consetetur invidunt magna dolores aliquyam dolores dolore. Amet erat amet et magna</p>
           </div>
           <div id="read" *ngIf="checkbtn2==true" class="col-md-12 py-3">
-            <p style="color: antiquewhite;"  class="lead"> Clita erat ipsum et lorem et sit, sed stet no labore lorem sit. Sanctus clita duo justo et tempor consetetur takimata eirmod, dolores takimata consetetur invidunt magna dolores aliquyam dolores dolore. Amet erat amet et magna</p>
+            <p style="color: antiquewhite; font-size: 90%;"  class="lead"> Clita erat ipsum et lorem et sit, sed stet no labore lorem sit. Sanctus clita duo justo et tempor consetetur takimata eirmod, dolores takimata consetetur invidunt magna dolores aliquyam dolores dolore. Amet erat amet et magna</p>
           </div>
         </div>
-      </div>
+      
     </div>
   </div>
 </div>
 </section>
 <section id="programs">
-  <div class="container py-5">
+  <div class="container p-5">
     <div class="row">
       <div class="col-md-6 offset-md-3">
          <div class=" text-center">
@@ -60,14 +59,14 @@
     <div class="row ">
       <div class="col-md-6 ">
         <div class="item">
-        <div class="row p-4">
+        <div class="row p-4 pb-0">
           <div class="col-md-3 col-sm-3 ">
             <img src="../../assets/images/features-first-icon.png" class="w-100" alt="">
           </div>
           <div class="col-md-9 col-sm-9">
-            <h4 style="font-weight: 600;" >Basic Fitness</h4>
-            <p style="color: #454751;">Fitness — from stretching, flexibility and aerobic exercise to strength training and sports nutrition.</p>
-            <p style="font-weight: 400; color:rgb(205, 93, 8) ;font-size: 120%;" class="cl">Discover More</p>
+            <h6 style="font-weight: 600;" >Basic Fitness</h6>
+            <p style="color: #454751; font-size: 80%;">Fitness — from stretching, flexibility and aerobic exercise to strength training and sports nutrition.</p>
+            <p style="font-weight: 400; color:rgb(205, 93, 8) ;font-size: 90%;" class="cl">Discover More</p>
           </div>
         </div>
       </div>
@@ -79,9 +78,9 @@
             <img src="../../assets/images/features-first-icon.png" class="w-100" alt="">
           </div>
           <div class="col-md-9 col-sm-9">
-            <h4 style="font-weight: 600;" >Advanced Muscle Course</h4>
-            <p style="color: #454751;">Boost your muscle and strength gains by learning how to use drop sets, supersets, rest pause training.</p>
-            <p style="font-weight: 400; color:rgb(205, 93, 8) ;font-size: 120%;" class="cl">Discover More</p>
+            <h6 style="font-weight: 600;" >Advanced Muscle Course</h6>
+            <p style="color: #454751; font-size: 80%;">Boost your muscle and strength gains by learning how to use drop sets, supersets, rest pause training.</p>
+            <p style="font-weight: 400; color:rgb(205, 93, 8) ;font-size: 90%;" class="cl">Discover More</p>
           </div>
         </div>
       </div>
@@ -92,9 +91,9 @@
             <img src="../../assets/images/features-first-icon.png" class="w-100" alt="">
           </div>
           <div class="col-md-9 col-sm-9">
-            <h4 style="font-weight: 600;" >New Gym Training</h4>
-            <p style="color: #454751;">Being new to the gym doesn't have to be intimidating and confusing.</p>
-            <p style="font-weight: 400; color:rgb(205, 93, 8) ;font-size: 120%;" class="cl">Discover More</p>
+            <h6 style="font-weight: 600;" >New Gym Training</h6>
+            <p style="color: #454751; font-size: 80%;">Being new to the gym doesn't have to be intimidating and confusing.</p>
+            <p style="font-weight: 400; color:rgb(205, 93, 8) ; font-size: 90%;" class="cl">Discover More</p>
           </div>
         </div>
       </div>
@@ -105,9 +104,9 @@
             <img src="../../assets/images/features-first-icon.png" class="w-100" alt="">
           </div>
           <div class="col-md-9 col-sm-9">
-            <h4 style="font-weight: 600;" >Yoga Training</h4>
-            <p style="color: #454751;">Find and compare from the largest selection of Yoga Teacher Training courses worldwide.</p>
-            <p style="font-weight: 400; color:rgb(205, 93, 8) ;font-size: 120%;" class="cl">Discover More</p>
+            <h6 style="font-weight: 600;" >Yoga Training</h6>
+            <p style="color: #454751; font-size: 80%;">Find and compare from the largest selection of Yoga Teacher Training courses worldwide.</p>
+            <p style="font-weight: 400; color:rgb(205, 93, 8) ;font-size: 90%;" class="cl">Discover More</p>
           </div>
         </div>
       </div>
@@ -118,9 +117,9 @@
             <img src="../../assets/images/features-first-icon.png" class="w-100" alt="">
           </div>
           <div class="col-md-9 col-sm-9">
-            <h4 style="font-weight: 600;" >Basic Muscle Course</h4>
-            <p style="color: #454751;">Goal. Strength, Hypertrophy, Fat Loss · Skill level. Beginner · Duration. 4 weeks · Days per week. 3-6 .</p>
-            <p style="font-weight: 400; color:rgb(205, 93, 8) ;font-size: 120%;" class="cl">Discover More</p>
+            <h6 style="font-weight: 600;" >Basic Muscle Course</h6>
+            <p style="color: #454751; font-size: 80%;">Goal. Strength, Hypertrophy, Fat Loss · Skill level. Beginner · Duration. 4 weeks · Days per week. 3-6 .</p>
+            <p style="font-weight: 400; color:rgb(205, 93, 8) ;font-size: 90%;" class="cl">Discover More</p>
           </div>
         </div>
       </div>
@@ -131,9 +130,9 @@
             <img src="../../assets/images/features-first-icon.png" class="w-100" alt="">
           </div>
           <div class="col-md-9 col-sm-9">
-            <h4 style="font-weight: 600;" >Body Building Course</h4>
-            <p style="color: #454751;">As a Bodybuilding specialist, you will learn training, recovery, motivation, and nutritional strategies to prepare you to work</p>
-            <p style="font-weight: 400; color:rgb(205, 93, 8) ;font-size: 120%;" class="cl">Discover More</p>
+            <h6 style="font-weight: 600; " >Body Building Course</h6>
+            <p style="color: #454751; font-size: 80%;">As a Bodybuilding specialist, you will learn training, recovery, motivation, and nutritional strategies to prepare you to work</p>
+            <p style="font-weight: 400; color:rgb(205, 93, 8) ;font-size: 90%;" class="cl">Discover More</p>
           </div>
         </div>
        </div>
@@ -157,19 +156,19 @@
       <div class="row justify-content-center">
        <div class="col-md-4">
         <div (click)="onclasses1()" class="box p-4 m-3 text-center">
-          <h4 [style.color]="checkbtn1Classes==true ?'red':'black'"><img src="../../assets/images/tabs-first-icon.png" alt=""> First Training Class</h4>
+          <h5 style="padding: 0%; margin: 0%;" [style.color]="checkbtn1Classes==true ?'red':'black'"><img src="../../assets/images/tabs-first-icon.png" alt=""> First Training Class</h5>
         </div> 
         <div (click)="onclasses2()" class="box p-4 m-3 text-center">
-          <h4 [style.color]="checkbtn2Classes==true ?'red':'black'"><img src="../../assets/images/tabs-first-icon.png" alt=""> Second Training Class</h4>
+          <h5 style="padding: 0%; margin: 0%;" [style.color]="checkbtn2Classes==true ?'red':'black'"><img src="../../assets/images/tabs-first-icon.png" alt=""> Second Training Class</h5>
         </div> 
         <div (click)="onclasses3()" class="box p-4 m-3 text-center">
-          <h4 [style.color]="checkbtn3Classes==true ?'red':'black'"><img src="../../assets/images/tabs-first-icon.png" alt=""> Third Training Class</h4>
+          <h5 style="padding: 0%; margin: 0%;" [style.color]="checkbtn3Classes==true ?'red':'black'"><img src="../../assets/images/tabs-first-icon.png" alt=""> Third Training Class</h5>
         </div>
         <div (click)="onclasses4()" class="box p-4 m-3 text-center">
-          <h4 [style.color]="checkbtn4Classes==true ?'red':'black'"><img src="../../assets/images/tabs-first-icon.png" alt=""> Fourth Training Class</h4>
+          <h5 style="padding: 0%; margin: 0%;" [style.color]="checkbtn4Classes==true ?'red':'black'"><img src="../../assets/images/tabs-first-icon.png" alt=""> Fourth Training Class</h5>
         </div>
         <div class="box-bt p-3 m-3 text-center">
-          <h3>view all schedule</h3>
+          <h4>view all schedule</h4>
         </div>
        </div>
        <div class="col-md-7 ">
