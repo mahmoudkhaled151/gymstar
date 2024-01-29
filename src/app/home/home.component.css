@@ -36,12 +36,12 @@ header em
     top: 0;
     background-color: black;
     opacity: .5;
+    z-index: 1;
 }
 .main-button 
 {
     border-radius: 0%;
     background-color: red;
-   
     padding: 1%;
     margin-top: 2%;
     color: white;
@@ -77,7 +77,6 @@ header em
 {
     border:1px solid tomato;
     border-radius: .8vh;
-  
     cursor: pointer;
 }
 .box:hover

@@ -13,6 +13,8 @@ import { PageComponent } from './page/page.component';
 import { HttpClientModule } from '@angular/common/http';
 import { AuthService } from './auth.service';
 import { SigninComponent } from './signin/signin.component';
+import { FooterComponent } from './footer/footer.component';
+import { ScheduleComponent } from './schedule/schedule.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -20,9 +22,9 @@ import { SigninComponent } from './signin/signin.component';
     HomeComponent,
     RegisterComponent,
     PageComponent,
-    SigninComponent ,
-
-
+    SigninComponent,
+    FooterComponent,
+    ScheduleComponent ,
   ],
   imports: [
     BrowserModule,

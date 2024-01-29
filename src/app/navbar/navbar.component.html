@@ -1,5 +1,5 @@
-<section id="navbar">
-  <header style="top: 0;  right: 0; left: 0;" class="position-fixed">
+<section id="navbar" >
+  <header style="top: 0;  right: 0; left: 0; z-index: 4;" class="position-absolute">
     <div class="container-fluid bg-dark">
        <div class="row">
          <div class="col-md-3 ">
@@ -38,43 +38,43 @@
              </div>
              
               
-                 <nav class=" navbar navbar-expand-lg navbar-dark bg-dark p-3 p-lg-0 p-xl-3">
+                 <nav  class=" navbar navbar-expand-lg navbar-dark bg-dark p-3 p-lg-0 p-xl-3 ">
                     
                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                          <span class="navbar-toggler-icon"></span>
                        </button>
                        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                         <ul class="navbar-nav me-auto mb-2 mb-lg-0  ">
                            <li class="nav-item">
-                             <a  class="nav-link active" aria-current="page" href="#">HOME</a>
+                             <a  class="nav-link active" aria-current="page" href="#">HOME PAGE</a>
                            </li>
                            <li class="nav-item">
-                             <a class="nav-link" href="#">ABOUT</a>
+                             <a class="nav-link" href="#">CLASSES SCHEDULE</a>
                            </li>
                            <li class="nav-item">
-                            <a class="nav-link" href="#">CLASSES</a>
-                          </li>
-                          <li class="nav-item">
                             <a class="nav-link" href="#">TRAINERS</a>
                           </li>
                            <li class="nav-item dropdown">
-                             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                               PAGES
-                             </a>
-                             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                               <li><a class="dropdown-item" href="#">Blog Grid</a></li>
-                               <li><a class="dropdown-item" href="#">Blog Details</a></li>
+                             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" >PROGRAM</a>
+                             <ul class="dropdown-menu" style="background-color: rgba(0,0,0, 1);" aria-labelledby="navbarDropdown">
+                               <li><a class="dropdown-item" style="color: orange;" href="#">Basic Fitness</a></li>
                                <li><hr class="dropdown-divider"></li>
-                               <li><a class="dropdown-item" href="#">testimonial</a></li>
+                               <li><a class="dropdown-item" style="color: orange;" href="#">Yoga Training</a></li>
+                               <li><hr class="dropdown-divider"></li>
+                               <li><a class="dropdown-item" style="color: orange;" href="#">Advanced Muscle Course</a></li>
+                               <li><hr class="dropdown-divider"></li>
+                               <li><a class="dropdown-item" style="color: orange;" href="#">New Gym Training</a></li>
+                               <li><hr class="dropdown-divider"></li>
+                               <li><a class="dropdown-item" style="color: orange;" href="#">Basic Muscle Course</a></li>
+                               <li><hr class="dropdown-divider"></li>
+                               <li><a class="dropdown-item" style="color: orange;" href="#">Body Building Course</a></li>
                              </ul>
                            </li>
-                           <li class="nav-item">
-                             <a class="nav-link " href="#">CONTACT</a>
-                           </li>
+            
                          </ul>
-                         <form class="d-flex">
-                           <button style="z-index: 1;font-size: 75%;" class="btn btn-warning p-3 me-5" type="button">JOIN US</button>
-                         </form>
+                        
+                           <button style="z-index: 1;font-size: 75%;" class="btn btn-warning p-3 me-5" type="button" (click)="sign()">JOIN US</button>
+                         
                        </div>
                    </nav>
             </div>

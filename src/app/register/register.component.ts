@@ -49,13 +49,13 @@ export class RegisterComponent {
     'password': new FormControl(null, Validators.pattern('^[A-Z][a-z0-9]{5,8}$')),
     'repassword': new FormControl(null, Validators.pattern('^[A-Z][a-z0-9]{5,8}$')),
   });
-  checkpassword(fd:FormGroup)
-  {
-    if (fd.controls['password'].value ===fd.controls['repassword'].value)
-    {
-      console.log("mahmoud");
-    }
-  }
+  // checkpassword(fd:FormGroup)
+  // {
+  //   if (fd.controls['password'].value ===fd.controls['repassword'].value)
+  //   {
+  //     console.log("mahmoud");
+  //   }
+  // }
   messageError:any;
   sendMessage(formData: any) {
     if (formData.valid == true) {
