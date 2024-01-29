@@ -11,7 +11,7 @@ import { Router } from '@angular/router';
 })
 export class SigninComponent {
   constructor( public _AuthService:AuthService , public _Router:Router ){
-    
+
   }
   ngOnInit() {
   }
@@ -29,7 +29,10 @@ export class SigninComponent {
             // console.log("Registration success",data.message)
             window.alert(data.message);
             this._Router.navigate(['/home']);
-            this._AuthService.saveUserData(data.message , data.token);
+            this._AuthService.saveUserData(data.results ,data.token);
+            console.log(this._AuthService.user.getValue());
+
+
           } else {
             window.alert('Registration failed. Please try again.');
           }
