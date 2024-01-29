@@ -12,7 +12,7 @@
   </div>
 <div class="blackout"></div>
 </header>
-<section id="about">
+<section *ngIf="isLogin" id="about">
 <div class="container-fluid p-5">
   <div class="row ">
     <div class="col-md-5 pt-5">
@@ -42,7 +42,7 @@
   </div>
 </div>
 </section>
-<section id="programs">
+<section *ngIf="isLogin" id="programs">
   <div class="container p-5">
     <div class="row">
       <div class="col-md-6 offset-md-3">
@@ -139,7 +139,7 @@
     </div>
   </div>
 </section>
-<section id="classes">
+<section *ngIf="isLogin" id="classes">
   <div class="container py-5">
     <div class="row">
       <div class="col-md-6 offset-md-3">
@@ -207,7 +207,7 @@
     </div>
 </div>
 </section>
-<section id="trainers">
+<section *ngIf="isLogin" id="trainers">
   <div class="container py-5">
     <div class="row">
       <div class="col-md-6 offset-md-3">
@@ -292,7 +292,7 @@
   </div>
 
 </section>
-<section id="contact">
+<section *ngIf="isLogin" id="contact">
   <div class="container py-5">
       <div class="text-center">
          <h1 style="text-transform: uppercase; font-weight: 700;">Connect<span style="color: rgb(205, 93, 8);"> with us </span></h1>

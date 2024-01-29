@@ -1,12 +1,30 @@
 import { Component } from '@angular/core';
 import { trigger, state, style, animate, transition } from '@angular/animations';
 import { FormControl , FormGroup , Validators } from '@angular/forms';
+import {AuthService} from '../auth.service'
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
   styleUrl: './home.component.css'
 })
 export class HomeComponent {
+  isLogin:boolean=false;
+  constructor(public _AuthService:AuthService){
+    _AuthService.user.subscribe(data =>
+      {
+        if(data)
+        {
+          this.isLogin=true;
+          console.log(this.isLogin);
+        }
+        else 
+        {
+          this.isLogin=false;
+          console.log(this.isLogin);
+        }
+      })
+    }
+  
   checkbtn1:boolean=true;
   checkbtn2:boolean=false;
 e: any;
