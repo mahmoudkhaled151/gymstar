@@ -1,0 +1,37 @@
+<section class="coverAll" style="z-index: -1;">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <div class="cover">
+     <div class="blackOut">
+        <div class="container ">
+            <div class="row center">
+                <div class="col-md-8 mt-5 ">
+                    <div class="blur p-5 m-5 ">
+                        <div class="text-center">
+                            <h6 class="fontstyleheader">Post Data For <span style="color: red;"> GYMSTAR</span></h6>
+                        </div>
+                        <form [formGroup]="postData" (ngSubmit)="sendMessage(postData)"  >
+                            <span *ngIf="messageError" style="color: red; ">{{messageError}}</span>
+                            <input style="font-size: 70%;" [class.is-invalid]='postData.get("tittle")?.invalid==true && postData.get("tittle")?.touched==true' formControlName="tittle" type="text" placeholder="Tittle" class="form-control w-100 mt-5 mb-3 ">
+                            <textarea  [class.is-invalid]='postData.get("Description")?.invalid==true && postData.get("Description")?.touched==true' formControlName="Description" type="text" placeholder="Description" class="form-control w-100 mt-2 mb-3 "></textarea>
+                            <input style="font-size: 70%;" [class.is-invalid]='postData.get("image")?.invalid==true && postData.get("image")?.touched==true' accept="image/*" type="file" formControlName="image" class="form-control mt-2 mb-3 " >                             
+                            <input style="font-size: 70%;" [class.is-invalid]='postData.get("id")?.invalid==true && postData.get("id")?.touched==true'  type="number" formControlName="id" placeholder="program Id" class="form-control mt-2 mb-3" >  
+                            <input style="font-size: 70%;" [class.is-invalid]='postData.get("Duration")?.invalid==true && postData.get("Duration")?.touched==true'  type="number" formControlName="Duration" placeholder="Duration" class="form-control mt-2 mb-3" >  
+                            <input style="font-size: 70%;" [class.is-invalid]='postData.get("exercise")?.invalid==true && postData.get("exercise")?.touched==true'  accept="image/gif" type="file" formControlName="exercise" placeholder="exercise" class="form-control mt-2 mb-3"   multiple>  
+
+                            <button [disabled]="postData.invalid==true " style="padding: 1%; font-size: 90%;"  class="btn btn-danger w-100 mt-3" type="submit">post data</button>
+
+                            
+                        </form>
+                        
+                        
+                    </div>
+                </div>
+
+
+            </div>
+
+        </div>
+     </div>
+    </div>
+    </section>

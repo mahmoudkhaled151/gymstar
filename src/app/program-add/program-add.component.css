@@ -1,0 +1,64 @@
+.coverAll
+{
+    background-image: url('../../assets/images/schedule-bg.jpg') ;
+    background-size: cover;
+    background-repeat: no-repeat;    
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    overflow: scroll;
+}
+
+
+  
+
+.cover
+{
+    position: relative;
+   
+    
+}
+.blackOut
+{
+    position: absolute;
+    background-color: rgba(0, 0, 0, .2);
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+.blur
+{
+    
+    background-color: rgba(0,0,0,.4);
+    border-radius: 10px;
+    border: solid red 1px;
+    
+}
+.center
+{
+    justify-content: center;
+}
+.d-inline-block
+{
+    display: inline-block;
+}
+input[type="number"]::-webkit-outer-spin-button, 
+input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+}
+.fontstyleheader
+{
+    color: white; 
+    font-family: 'El Messiri', sans-serif;  
+    font-weight: 600;
+}
+.fontstyle
+{
+    color: white; 
+    font-family: 'El Messiri', sans-serif; 
+    font-weight: 500; 
+}

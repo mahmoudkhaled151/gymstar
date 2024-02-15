@@ -64,7 +64,7 @@ export class RegisterComponent {
           if (data.status == true) {
             // console.log("Registration success",data.message)
             // window.alert(data.message);
-            this._Router.navigate(['/sign'])
+            this._Router.navigate(['/signin'])
           } else {
             window.alert('Registration failed. Please try again.');
           }

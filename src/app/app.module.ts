@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule, provideClientHydration } from '@angular/platform-browser';
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NavbarComponent } from './navbar/navbar.component';
@@ -15,6 +14,7 @@ import { AuthService } from './auth.service';
 import { SigninComponent } from './signin/signin.component';
 import { FooterComponent } from './footer/footer.component';
 import { ScheduleComponent } from './schedule/schedule.component';
+import { ProgramAddComponent } from './program-add/program-add.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -24,7 +24,8 @@ import { ScheduleComponent } from './schedule/schedule.component';
     PageComponent,
     SigninComponent,
     FooterComponent,
-    ScheduleComponent ,
+    ScheduleComponent,
+    ProgramAddComponent ,
   ],
   imports: [
     BrowserModule,

@@ -9,6 +9,7 @@ import {AuthService} from '../auth.service'
 })
 export class HomeComponent {
   isLogin:boolean=false;
+  programs:any=[];
   constructor(public _AuthService:AuthService){
     _AuthService.user.subscribe(data =>
       {
@@ -19,12 +20,20 @@ export class HomeComponent {
         }
         else 
         {
-          this.isLogin=false;
+          this.isLogin=true;
           console.log(this.isLogin);
         }
       })
+      _AuthService.getPrograms().subscribe((data) =>
+      {
+        this.programs=data.results;
+      });
+     console.log(this.programs)   ;
     }
-  
+    showProgram(index:number)
+    {
+      this._AuthService.setPrograms(index);
+    }
   checkbtn1:boolean=true;
   checkbtn2:boolean=false;
 e: any;
