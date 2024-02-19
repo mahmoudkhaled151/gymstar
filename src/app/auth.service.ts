@@ -33,11 +33,12 @@ export class AuthService {
   }
   getPrograms(): Observable<any>
   {
-    return this._HttpClient.get(`http://localhost:3000/gym-star/programs/${this.program}`);
+    return this._HttpClient.get('http://localhost:3000/gym-star/programs');
+    // return this._HttpClient.get(`http://localhost:3000/gym-star/programs/${this.program}`);
   }
-  postPrograms(data: any): Observable<any>
+  postPrograms( source:any): Observable<any>
   {
-    return this._HttpClient.post('http://localhost:3000/gym-star/exercises/add' , data);
+    return this._HttpClient.post('http://localhost:3000/gym-star/programs/add'  ,source);
   }
   // getProgram(index:number): Observable<any>
   // {

@@ -15,19 +15,19 @@
 <section *ngIf="isLogin" id="about">
 <div class="container-fluid p-5">
   <div class="row ">
-    <div class="col-md-5 pt-5">
+    <div class="col-lg-5 pt-5">
       <img class="w-100" src="../../assets/about.jpg" alt="">
     </div>
-    <div class="col-md-7 pe-5 ps-5 pb-5">
-      <h5 style="text-transform:uppercase; color: red;">about us</h5>
+    <div class="col-lg-7 pe-5 ps-5 pb-5">
+      <h5 style="text-transform:uppercase; color: red; " class="py-3">about us</h5>
       <h1 style="font-weight: 900;" class="display-5">WELCOME TO GYMSTER</h1>
       <h5 style="color: #3a3d46; font-size: 150%; font-weight: 400; font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif">Diam dolor diam ipsum tempor sit. Clita erat ipsum et lorem stet no labore lorem sit clita duo justo magna dolore</h5>
       <p style="font-size: 100%;">Nonumy erat diam duo labore clita. Sit magna ipsum dolor sed ea duo at ut. Tempor sit lorem sit magna ipsum duo. Sit eos dolor ut sea rebum, diam sea rebum lorem kasd ut ipsum dolor est ipsum. Et stet amet justo amet clita erat, ipsum sed at ipsum eirmod labore lorem.</p>
         <div style="background-color:#222429;" class="row  pe-5 ps-5 pt-5">
-          <div id="bt1" (click)="onread1()" [class.bt]=" checkbtn1 == true" class="col-md-6 bt1">
+          <div id="bt1" (click)="onread1()" [class.bt]=" checkbtn1 == true" class="col-md-6 col-sm-6 bt1">
             <p style="font-size: 90%;   position: relative;top: 50%;transform: translate(0, -50%);">about us</p>
           </div>
-          <div id="bt2" (click)="onread2()" [class.bt]=" checkbtn2 == true" ng-hide="checkbtn2" class="col-md-6 bt1">
+          <div id="bt2" (click)="onread2()" [class.bt]=" checkbtn2 == true" ng-hide="checkbtn2" class="col-md-6 col-sm-6 bt1">
             <p style="font-size: 90%;   position: relative;top: 50%;transform: translate(0, -50%);" >why choose us</p>
           </div>
           <div *ngIf="checkbtn1==true" id="read" class="col-md-12 py-3">
@@ -45,7 +45,7 @@
 <section *ngIf="isLogin" id="programs">
   <div class="container p-5">
     <div class="row">
-      <div class="col-md-6 offset-md-3">
+      <div class="col-lg-6 offset-lg-3">
          <div class=" text-center">
            <h1 style="text-transform: uppercase; font-weight: 700;">choose <span style="color: rgb(205, 93, 8);">program</span></h1>
            <img src="../../assets/images/line-dec.png" alt="">
@@ -54,13 +54,13 @@
       </div>
     </div>
     <div class="row ">
-      <div *ngFor="let prog of programs" class="col-md-6 ">
+      <div *ngFor="let prog of programs" class="col-lg-6 ">
         <div class="item">
         <div class="row p-4 pb-0">
-          <div class="col-md-3 col-sm-3 ">
+          <div class="col-lg-3 col-sm-3 ">
             <img src="../../assets/images/features-first-icon.png" class="w-100" alt="">
           </div>
-          <div  class="col-md-9 col-sm-9">
+          <div  class="col-lg-9 col-sm-9">
             <h6 style="font-weight: 600;" >{{prog.name}}</h6>
             <p style="color: #454751; font-size: 80%;">{{prog.description}}</p>
             <p style="font-weight: 400; color:rgb(205, 93, 8) ;font-size: 90%;" class="cl" (click)="showProgram(prog.id)">Discover More</p>
@@ -74,7 +74,7 @@
 <section *ngIf="isLogin" id="classes">
   <div class="container py-5">
     <div class="row">
-      <div class="col-md-6 offset-md-3">
+      <div class="col-lg-6 offset-lg-3">
          <div class=" text-center">
            <h1 style="text-transform: uppercase; font-weight: 700;">choose <span style="color: rgb(205, 93, 8);">classes</span></h1>
            <img src="../../assets/images/line-dec.png" alt="">
@@ -83,7 +83,7 @@
       </div>
     
       <div class="row justify-content-center">
-       <div class="col-md-4">
+       <div class="col-lg-4">
         <div (click)="onclasses1()" class="box p-4 m-3 text-center">
           <h5 style="padding: 0%; margin: 0%;" [style.color]="checkbtn1Classes==true ?'red':'black'"><img src="../../assets/images/tabs-first-icon.png" alt=""> First Training Class</h5>
         </div> 
@@ -100,7 +100,7 @@
           <h4>view all schedule</h4>
         </div>
        </div>
-       <div class="col-md-7 ">
+       <div class="col-lg-7 ">
         <div *ngIf="checkbtn1Classes==true">
         <article class="box-container p-5">
           <img class="w-100" src="../../assets/images/training-image-01.jpg" alt="">
@@ -142,7 +142,7 @@
 <section *ngIf="isLogin" id="trainers">
   <div class="container py-5">
     <div class="row">
-      <div class="col-md-6 offset-md-3">
+      <div class="col-lg-6 offset-lg-3">
          <div class=" text-center">
            <h1 style="text-transform: uppercase; font-weight: 700;">EXPERT <span style="color: rgb(205, 93, 8);">TRAINERS</span></h1>
            <img src="../../assets/images/line-dec.png" alt="">
@@ -153,7 +153,7 @@
     <div class="container">
       
     <div class="row justify-content-center p-5">
-       <div class="col-md-4">
+       <div class="col-lg-4">
         <div class="trainer p-4">
           <img class="w-100" src="../../assets/images/first-trainer.jpg" alt="">
            <h6 style="color: tomato;" class=" pt-3">Strength Trainer</h6>
@@ -175,7 +175,7 @@
               </div>
           </div>
        </div>
-       <div class="col-md-4">
+       <div class="col-lg-4">
         <div class="trainer p-4">
           <img class="w-100" src="../../assets/images/second-trainer.jpg" alt="">
            <h6 style="color: tomato;" class=" pt-3">Muscle Trainer</h6>
@@ -197,7 +197,7 @@
               </div>
           </div>
        </div>
-       <div class="col-md-4">
+       <div class="col-lg-4">
         <div class="trainer p-4">
           <img class="w-100" src="../../assets/images/third-trainer.jpg" alt="">
            <h6 style="color: tomato;" class=" pt-3">Power Trainer</h6>
@@ -225,13 +225,13 @@
 
 </section>
 <section *ngIf="isLogin" id="contact">
-  <div class="container py-5">
+  <div class="container-fluid py-5">
       <div class="text-center">
          <h1 style="text-transform: uppercase; font-weight: 700;">Connect<span style="color: rgb(205, 93, 8);"> with us </span></h1>
          <img src="../../assets/images/line-dec.png" alt="">
 
       </div>
-      <div class="row p-5">
+      <div class="row py-5">
 
       <div style="background-image: url(../../assets/images/schedule-bg.jpg);" class="col-md-7">
         
@@ -257,9 +257,9 @@
           </div>
           </form>
       </div>
-      <div style="position: relative;" class="col-md-5 ">
+      <div style="position: relative;" class="col-md-5  ">
         <div >
-        <iframe style="border:0; position: absolute; top: 0; bottom: 0; right: 0;left: 0; width: 100%; height: 100%;" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3455.3570950417907!2d31.214244299999997!3d29.997901199999994!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x145846ff96d97c57%3A0xccba4d52d192828a!2z2KfZhNio2K3YsSDYp9mE2KPYudi42YXYjCDZgtiz2YUg2KfZhNi52YXYsdin2YbZitip2Iwg2KfZhNis2YrYstip!5e0!3m2!1sar!2seg!4v1667747724485!5m2!1sar!2seg"   allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        <iframe style="border:0; position: absolute; top: 0; bottom: 0; right: 0;left: 0; width: 100%; height: 100%;" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3455.3570950417907!2d31.214244299999997!3d29.997901199999994!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x145846ff96d97c57%3A0xccba4d52d192828a!2z2KfZhNio2K3YsSDYp9mE2KPYudi42YXYjCDZgtiz2YUg2KfZhNi52YXYsdin2YbZitip2Iwg2KfZhNis2YrYstip!5e0!3m2!1sar!2seg!4v1667747724485!5m2!1sar!2seg"    loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
       </div>
     </div>
     </div>

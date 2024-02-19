@@ -28,7 +28,8 @@ export class HomeComponent {
       {
         this.programs=data.results;
       });
-     console.log(this.programs)   ;
+     console.log(this.programs);
+    //  console.log('iuoihoi');
     }
     showProgram(index:number)
     {
