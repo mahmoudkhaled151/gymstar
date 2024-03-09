@@ -1,31 +1,51 @@
-import { Injectable } from '@angular/core';
+import { Inject, Injectable, PLATFORM_ID } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { HttpInterceptor, HttpRequest, HttpHandler, HttpEvent, HttpErrorResponse } from '@angular/common/http';
-import {userData} from './user'
-import { Observable , BehaviorSubject } from 'rxjs';
+import { Observable , BehaviorSubject, of } from 'rxjs';
 import { NumberValueAccessor } from '@angular/forms';
+import { isPlatformBrowser } from '@angular/common';
 @Injectable({
   providedIn: 'root'
 })
 export class AuthService { 
 
-  constructor(public _HttpClient :HttpClient) { }
-  user =new BehaviorSubject<userData | null>(null);
+  constructor(@Inject(PLATFORM_ID) private platformId: any,  public _HttpClient :HttpClient ) { }
   program =new BehaviorSubject<number>(0);
-  nav =new BehaviorSubject(false);
-  
+  login =new BehaviorSubject(false);
+  nav =new BehaviorSubject(true);
+  isLogIn(): Observable<boolean> {
+    // Check if the code is running in a browser environment
+    if (isPlatformBrowser(this.platformId)) {
+      // Access localStorage if available
+      const token = localStorage.getItem('Token');
+      const isLoggedIn = !!token; // Convert token to boolean
+
+      // Return an observable with the boolean value indicating whether the user is logged in or not
+      this.login.next(isLoggedIn);
+      return of(isLoggedIn);
+    } else {
+      // Return an observable with value false if not running in a browser environment
+      this.login.next(false);
+      return of(false);
+    }
+  }
+
   register(data: any): Observable<any>
   {
-     return this._HttpClient.post('http://localhost:3000/api-store-book/users/add' , data);
+     return this._HttpClient.post('http://localhost:3000/gym-star/users/add' , data);
   }
   sign(data: any): Observable<any>
   {
-     return this._HttpClient.post('http://localhost:3000/api-store-book/users/login' , data)
+     return this._HttpClient.post('http://localhost:3000/gym-star/users/login' , data)
   }
-  saveUserData(userDataSave: any , token: any)
+  checkToken(token:any): Observable<any>
   {
-    let User=new userData(userDataSave.fname , userDataSave.lname , userDataSave.email , token);
-    this.user.next(User);
+    return this._HttpClient.get('http://localhost:3000/gym-star/home' , token)
+  }
+  saveUserData( token: any)
+  {
+    localStorage.setItem('Token' , token);
+    this.login.next(true);
   }
   setPrograms(programId: number)
   {
@@ -34,14 +54,18 @@ export class AuthService {
   getPrograms(): Observable<any>
   {
     return this._HttpClient.get('http://localhost:3000/gym-star/programs');
-    // return this._HttpClient.get(`http://localhost:3000/gym-star/programs/${this.program}`);
   }
   postPrograms( source:any): Observable<any>
   {
-    return this._HttpClient.post('http://localhost:3000/gym-star/programs/add'  ,source);
+    return this._HttpClient.post('http://localhost:3000/gym-star/programs/add' ,source);
   }
-  // getProgram(index:number): Observable<any>
-  // {
-  //   return this._HttpClient.get('http://localhost:3000/gym-star/programs' , index);
-  // }
+  getProgram(): Observable<any>
+  {
+    return this._HttpClient.get(`http://localhost:3000/gym-star/program/exercises/${this.program.value}`);   
+  }
+  schedule(day :any):Observable<any>
+  {
+    return this._HttpClient.get(`http://localhost:3000/gym-star/schedule/${day}` );   
+
+  }
 }

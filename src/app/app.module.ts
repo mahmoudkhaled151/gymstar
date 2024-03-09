@@ -9,12 +9,15 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ReactiveFormsModule } from '@angular/forms';
 import { RegisterComponent } from './register/register.component';
 import { PageComponent } from './page/page.component';
-import { HttpClientModule } from '@angular/common/http';
+import { HTTP_INTERCEPTORS, HttpClientModule, provideHttpClient, withInterceptors } from '@angular/common/http';
 import { AuthService } from './auth.service';
 import { SigninComponent } from './signin/signin.component';
 import { FooterComponent } from './footer/footer.component';
 import { ScheduleComponent } from './schedule/schedule.component';
 import { ProgramAddComponent } from './program-add/program-add.component';
+import { CustomInterceptor } from './custom.interceptor';
+import { HomePageComponent } from './home-page/home-page.component';
+import { TrainersComponent } from './trainers/trainers.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -25,7 +28,9 @@ import { ProgramAddComponent } from './program-add/program-add.component';
     SigninComponent,
     FooterComponent,
     ScheduleComponent,
-    ProgramAddComponent ,
+    ProgramAddComponent,
+    HomePageComponent,
+    TrainersComponent ,
   ],
   imports: [
     BrowserModule,
@@ -37,7 +42,7 @@ import { ProgramAddComponent } from './program-add/program-add.component';
 
   ],
   providers: [
-    provideClientHydration()
+    provideClientHydration(), { provide: HTTP_INTERCEPTORS, useClass: CustomInterceptor, multi: true },
   ],
   bootstrap: [AppComponent]
 })

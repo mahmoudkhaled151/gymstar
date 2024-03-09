@@ -1,7 +1,9 @@
-import { Component } from '@angular/core';
+import { Component, Inject, PLATFORM_ID } from '@angular/core';
 import { trigger, state, style, animate, transition } from '@angular/animations';
 import { FormControl , FormGroup , Validators } from '@angular/forms';
 import {AuthService} from '../auth.service'
+import { Router } from '@angular/router';
+import { isPlatformBrowser } from '@angular/common';
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
@@ -10,20 +12,25 @@ import {AuthService} from '../auth.service'
 export class HomeComponent {
   isLogin:boolean=false;
   programs:any=[];
-  constructor(public _AuthService:AuthService){
-    _AuthService.user.subscribe(data =>
-      {
-        if(data)
-        {
-          this.isLogin=true;
-          console.log(this.isLogin);
-        }
-        else 
-        {
-          this.isLogin=true;
-          console.log(this.isLogin);
-        }
-      })
+  imageSource='https://res.cloudinary.com/dphrkslty/image/upload/v1708537815/';
+  constructor( @Inject(PLATFORM_ID) private platformId: Object ,public _AuthService:AuthService , private _Router:Router){
+    _AuthService.nav.next(true);
+
+  //   if (isPlatformBrowser(this.platformId)) {
+  //   if ( localStorage.getItem('Token')==null)
+  //   {
+  //     this.isLogin=false; 
+  //   }
+  //   else
+  //   {
+  //   _AuthService.checkToken(localStorage.getItem('Token')).subscribe( (data:any) => {
+  //   this.isLogin=data.status; 
+  //   console.log(this.isLogin)
+  //   })
+  //   }
+  // }
+      _AuthService.login.subscribe(val=>this.isLogin=val);
+
       _AuthService.getPrograms().subscribe((data) =>
       {
         this.programs=data.results;
@@ -34,6 +41,8 @@ export class HomeComponent {
     showProgram(index:number)
     {
       this._AuthService.setPrograms(index);
+      this._Router.navigate(['/page']);
+      console.log(index)
     }
   checkbtn1:boolean=true;
   checkbtn2:boolean=false;

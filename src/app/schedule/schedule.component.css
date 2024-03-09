@@ -1,3 +1,16 @@
+.backg
+{
+  background-image: url('../../assets/carousel-1.jpg');
+  background-repeat: no-repeat; /* Do not repeat the image */
+  background-position: center center; /* Center the image */
+  background-size: cover;
+  overflow-x: hidden;
+}
+.blackOut
+{
+  
+  background-color: rgba(0,0,0,.6);
+}
 #schedule {
     padding: 0px 0px 140px 0px;
     background-image: url(../../assets/images/schedule-bg.jpg);

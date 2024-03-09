@@ -10,7 +10,7 @@
                         <div class="text-center">
                             <h6 class="fontstyleheader">Post Data For <span style="color: red;"> GYMSTAR</span></h6>
                         </div>
-                        <form [formGroup]="postData" (ngSubmit)="sendMessage(postData)"  >
+                        <form [formGroup]="postData" (ngSubmit)="sendMessage()"  >
                             <span *ngIf="messageError" style="color: red; ">{{messageError}}</span>
                             <input style="font-size: 70%;" [class.is-invalid]='postData.get("tittle")?.invalid==true && postData.get("tittle")?.touched==true' formControlName="tittle" type="text" placeholder="Tittle" class="form-control w-100 mt-5 mb-3 ">
                             <textarea  [class.is-invalid]='postData.get("Description")?.invalid==true && postData.get("Description")?.touched==true' formControlName="Description" type="text" placeholder="Description" class="form-control w-100 mt-2 mb-3 "></textarea>

@@ -1,16 +1,15 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<section style="background-image: url('../../assets/images/schedule-bg.jpg') ;" class="coverAll">
+<section [style.background-image]="'url(' +backImg + ')'" class="coverAll">
     
     <div class="cover">
      <div >
         <div class="container-fluid">
-            <div class="row">
-                <div class="col-md-4 blackOut ">
+            <div class="row ">
+                <div style="padding-top: 8%;" class="col-md-4  blackOut ">
                    <h1 class="heading-text p-5 pb-0"  style="font-family:  HeadingProTreble-Heavy,sans-serif;">
-                    <span class="why">WHY</span>
-                    <span class="basic-fit">BASIC-FIT</span>
+                    <span style="text-transform: uppercase ;" class="basic-fit">{{result.title}}</span>
                    </h1>
-                   <p class="head-text" style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam consequatur iure quia et atque at quos nobis rerum ratione sapiente error ut quod, nam soluta voluptatibus excepturi eligendi esse ducimus!</p>
+                   <p class="head-text" style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">{{result.description}}</p>
                 </div>
 
             </div>
@@ -20,161 +19,42 @@
 </div>
 </section>
 <section>
-    <div style="padding: 10%; padding-bottom: 0%;" class="container ">
+    <div *ngFor="let exer of exercise">
+    <div style="padding: 2%; padding-top: 8%; padding-bottom: 0%;" class="container ">
         <div class="row p-5">
             
             <div class="col-md-6">
                 <h1 style="font-family:  HeadingProTreble-Heavy,sans-serif;">
-                    <span class="basic-fit1">BASIC-FIT</span>
-                    <span class="club">CLUBS</span>
+                    <span style="text-transform: uppercase;" class="basic-fit1">{{exer.title}}</span>
+                    <span class="club">{{exer.duration}}</span>
                    </h1>
             </div>
             <div class="row justify-content-center">
                 <div class="col-md-6 ">
-                    <p class="lead" style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Qui, temporibus asperiores totam dolore, iste esse, inventore veritatis et quasi vel fuga voluptas? Libero minima, nobis expedita quo officiis ratione beatae.</p>
+                    <p class="lead" style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">{{exer.description}}</p>
                 </div>
             <div class="col-md-6">
-                <img src="../../assets/blog-3.jpg" class="w-100" alt="">
+                <img [src]="imageSource+exer.imagePath" class="w-100" alt="">
             </div>
         </div>
         <div  class="row py-5 ">
-           <div  class="col-md-4 col-sm-4">
-            <div style=" position: relative; height:50vh;">
-             <img src="../../assets/Club page website-BasicFit Tilburg 26-8-2113386.jpeg" class="w-100 h-100" alt="">
-             <div class="detail p-2">
+           <div *ngFor="let gif of exer.animationDataPath" class="col-md-4 col-sm-4">
+            <div style=" position: relative; height:50vh; border-radius: 5px;box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;">
+             <img [src]="imageSource+gif" class="w-100 h-100" alt="">
+             <!-- <div class="detail p-2">
                 <h6>1400+ CLUBS</h6>
                 <p style="float: right; font-weight: 400;">check it out <i style="color: red;" class="fa-solid fa-arrow-right-to-bracket"></i></p>
-             </div>
+             </div> -->
             </div>
            </div>    
-       <div  class="col-md-4 col-sm-4">
-            <div style=" position: relative; height:50vh;">
-             <img src="../../assets/Club page website-BasicFit Tilburg 26-8-2113386.jpeg" class="w-100 h-100" alt="">
-             <div class="detail p-2">
-                <h6>1400+ CLUBS</h6>
-                <p style="float: right; font-weight: 400;">check it out <i style="color: red;" class="fa-solid fa-arrow-right-to-bracket"></i></p>
-             </div>
-            </div>
-           </div>
-           <div  class="col-md-4 col-sm-4">
-            <div style=" position: relative; height:50vh;">
-             <img src="../../assets/Club page website-BasicFit Tilburg 26-8-2113386.jpeg" class="w-100 h-100" alt="">
-             <div class="detail p-2">
-                <h6>1400+ CLUBS</h6>
-                <p style="float: right; font-weight: 400;">check it out <i style="color: red;" class="fa-solid fa-arrow-right-to-bracket"></i></p>
-             </div>
-            </div>
-           </div>
+       
+           
         </div>
     </div>
         
     </div>
+</div>
 </section>
 
-<section>
-    <div style="padding: 10%; padding-top: 0%;" class="container ">
-        <div class="row p-5">
-            
-            <div class="col-md-6">
-                <h1 style="font-family:  HeadingProTreble-Heavy,sans-serif;">
-                    <span class="basic-fit1">BASIC-FIT</span>
-                    <span class="club">CLUBS</span>
-                   </h1>
-            </div>
-            <div class="row justify-content-center">
-                <div class="col-md-6">
-                    <img src="../../assets/blog-3.jpg" class="w-100" alt="">
-                </div>
-               
-                <div class="col-md-6 ">
-                    <p class="lead" style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Qui, temporibus asperiores totam dolore, iste esse, inventore veritatis et quasi vel fuga voluptas? Libero minima, nobis expedita quo officiis ratione beatae.</p>
-                </div>
-        </div>
-        <div  class="row py-5 ">
-            <div  class="col-md-4 col-sm-4">
-             <div style=" position: relative; height:50vh;">
-              <img src="../../assets/Club page website-BasicFit Tilburg 26-8-2113386.jpeg" class="w-100 h-100" alt="">
-              <div class="detail p-2">
-                 <h6>1400+ CLUBS</h6>
-                 <p style="float: right; font-weight: 400;">check it out <i style="color: red;" class="fa-solid fa-arrow-right-to-bracket"></i></p>
-              </div>
-             </div>
-            </div>    
-        <div  class="col-md-4 col-sm-4">
-             <div style=" position: relative; height:50vh;">
-              <img src="../../assets/Club page website-BasicFit Tilburg 26-8-2113386.jpeg" class="w-100 h-100" alt="">
-              <div class="detail p-2">
-                 <h6>1400+ CLUBS</h6>
-                 <p style="float: right; font-weight: 400;">check it out <i style="color: red;" class="fa-solid fa-arrow-right-to-bracket"></i></p>
-              </div>
-             </div>
-            </div>
-            <div  class="col-md-4 col-sm-4">
-             <div style=" position: relative; height:50vh;">
-              <img src="../../assets/Club page website-BasicFit Tilburg 26-8-2113386.jpeg" class="w-100 h-100" alt="">
-              <div class="detail p-2">
-                 <h6>1400+ CLUBS</h6>
-                 <p style="float: right; font-weight: 400;">check it out <i style="color: red;" class="fa-solid fa-arrow-right-to-bracket"></i></p>
-              </div>
-             </div>
-            </div>
-         </div>
-        </div>
-    </div>
-</section>
 
-<section>
-    <div class="container p-5">
-        <div class="row">
-                <h1 style="font-weight: 900; font-size: 200%;" >EXTRAS</h1>
-                  
-            <div class="col-md-4">
-                <div style="position: relative;">
-                    <img src="../../assets/1.jpeg" style="height: 50vh;" class="w-100" alt="">
-                
-                <div class="detail p-2">
-                    <h6>1400+ CLUBS</h6>
-                    <p style="font-weight: 400;">check it out </p>
-            </div>
-            </div>
-            </div>
-            
-            <div class="col-md-4">
-                <div style="position: relative;">
-                    <img src="../../assets/2.jpg" style="height: 50vh;" class="w-100" alt="">
-                
-                <div class="detail p-2">
-                    <h6>1400+ CLUBS</h6>
-                    <p style="font-weight: 400;">check it out </p>
-            </div>
-            </div>
-            </div>
-             
-            <div class="col-md-4">
-                <div style="position: relative;">
-                    <img src="../../assets/3.jpeg" style="height: 50vh;" class="w-100" alt="">
-                
-                <div class="detail p-2">
-                    <h6>1400+ CLUBS</h6>
-                    <p style="font-weight: 400;">check it out </p>
-            </div>
-            </div>
-            </div>
-        </div>
-    </div>
-</section>
 
-<section>
-    <div class="container py-5">
-        <div class="row">
-            <div style="padding-left: 10%; padding-right: 10%;">
-            <h1 style="font-weight: 900;">BE INSPIRED TO TAKE THE FIRST STEP TOO!</h1>
-            <p>No matter how you exercise, Basic-Fit is a fan of yours. Whether you work out at the club, at home or outdoors, we offer you all the tools and services you need to achieve your goals. Be inspired by our members, personal trainers and ambassadors.</p>
-        </div>
-            <div class="col-md-3">
-                <img src="../../assets/1.jpeg" class="w-100" style="height: 50vh;" alt="">
-            </div>
-        </div>
-        <button style="float: right;" [disabled]="" type="button" class="btn btn-info py-2" (click)="readMore()">Read More</button>
-    </div>
-</section>

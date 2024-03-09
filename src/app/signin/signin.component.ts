@@ -11,13 +11,13 @@ import { Router } from '@angular/router';
 })
 export class SigninComponent {
   constructor( public _AuthService:AuthService , public _Router:Router ){
-
+    _AuthService.nav.next(false);
   }
   ngOnInit() {
   }
   signin:FormGroup=new FormGroup({
 
-    'Email': new FormControl(null,[Validators.required ]),
+    'userName': new FormControl(null,[Validators.required ]),
     'password': new FormControl(null, Validators.required),
   });
   messageError:any
@@ -25,15 +25,14 @@ export class SigninComponent {
     if (formData.valid == true) {
       this._AuthService.sign(formData.value).subscribe(
         data => {
-          if (data.status == true) {
-            // console.log("Registration success",data.message)
-            window.alert(data.message);
+          if (data.status == true) 
+          {
+            this._AuthService.saveUserData(data.token);
             this._Router.navigate(['/home']);
-            this._AuthService.saveUserData(data.results ,data.token);
-            console.log(this._AuthService.user.getValue());
-
-
-          } else {
+            console.log(data.token);
+            this._AuthService.login.next(true);
+          }
+           else {
             window.alert('Registration failed. Please try again.');
           }
         },

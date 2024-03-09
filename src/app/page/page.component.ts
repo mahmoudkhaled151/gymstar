@@ -6,16 +6,21 @@ import {AuthService} from '../auth.service'
   styleUrl: './page.component.css'
 })
 export class PageComponent {
-  result:any;
+  result:any=0;
+  exercise: any=0;
+  backImg='';
+  imageSource='https://res.cloudinary.com/dphrkslty/image/upload/v1708537815/'
   constructor(public _AuthService:AuthService)
   {
-    this._AuthService.getPrograms().subscribe((programs) => {
-      this.result = programs.results;
+    this._AuthService.getProgram().subscribe((program) => {
+      if (program.results.program!=null && program.results.exercises!=null)
+      {
+      this.result = program.results.program;
+      this.backImg=this.imageSource + this.result.images[0];
+      // this.result.images[0]="";
+      this.exercise=program.results.exercises;
+      }
     })
   }  
    more:Boolean=false;
-   readMore()
-   {
-   this.more=true;
-   }
 }

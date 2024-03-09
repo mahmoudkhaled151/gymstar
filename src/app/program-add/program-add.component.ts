@@ -23,7 +23,7 @@ export class ProgramAddComponent {
   });  
   
   messageError:any
-  sendMessage(data:any) {
+  sendMessage() {
 
     const formData = new FormData();
     

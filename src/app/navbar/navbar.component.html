@@ -1,4 +1,4 @@
-<section id="navbar" >
+<section *ngIf="navShow==true" id="navbar" >
   <header style="top: 0;  right: 0; left: 0; z-index: 4;" class="position-absolute">
     <div class="container-fluid bg-dark">
        <div class="row">
@@ -46,35 +46,26 @@
                        <div class="collapse navbar-collapse" id="navbarSupportedContent">
                          <ul class="navbar-nav me-auto mb-2 mb-lg-0  ">
                            <li *ngIf="isLogin" class="nav-item">
-                             <a  class="nav-link active" aria-current="page" href="#">HOME PAGE</a>
+                             <a routerLinkActive="active" class="nav-link" aria-current="page" href="#">HOME PAGE</a>
                            </li>
                            <li *ngIf="isLogin" class="nav-item">
-                             <a class="nav-link" href="#">CLASSES SCHEDULE</a>
+                             <a routerLinkActive="active" class="nav-link" href="/schedule">CLASSES SCHEDULE</a>
                            </li>
                            <li *ngIf="isLogin" class="nav-item">
-                            <a class="nav-link" href="#">TRAINERS</a>
+                            <a routerLinkActive="active" class="nav-link" href="/trainers">TRAINERS</a>
                           </li>
                            <li *ngIf="isLogin" class="nav-item dropdown">
                              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" >PROGRAM</a>
-                             <ul class="dropdown-menu" style="background-color: rgba(0,0,0, 1);" aria-labelledby="navbarDropdown">
-                               <li><a class="dropdown-item" style="color: orange;" href="#">Basic Fitness</a></li>
-                               <li><hr class="dropdown-divider"></li>
-                               <li><a class="dropdown-item" style="color: orange;" href="#">Yoga Training</a></li>
-                               <li><hr class="dropdown-divider"></li>
-                               <li><a class="dropdown-item" style="color: orange;" href="#">Advanced Muscle Course</a></li>
-                               <li><hr class="dropdown-divider"></li>
-                               <li><a class="dropdown-item" style="color: orange;" href="#">New Gym Training</a></li>
-                               <li><hr class="dropdown-divider"></li>
-                               <li><a class="dropdown-item" style="color: orange;" href="#">Basic Muscle Course</a></li>
-                               <li><hr class="dropdown-divider"></li>
-                               <li><a class="dropdown-item" style="color: orange;" href="#">Body Building Course</a></li>
+                             <ul  class="dropdown-menu" style="background-color: rgba(0,0,0, 1);" aria-labelledby="navbarDropdown">
+                               <li *ngFor="let prog of programs"><a class="dropdown-item" style="color: orange; cursor: pointer;"(click)="showProgram(prog.id)">{{prog.name}}</a></li>
+
                              </ul>
                            </li>
             
                          </ul>
                         
-                           <button style="z-index: 1;font-size: 75%;" class="btn btn-warning p-3 me-5" type="button" (click)="sign()">JOIN US</button>
-                         
+                           <button *ngIf="isLogin==false" style="z-index: 1;font-size: 90%;" class="glow p-3 " type="button" (click)="sign()">JOIN US</button>
+                           <button *ngIf="isLogin==true" style="z-index: 1;font-size: 90%;" (click)="logOut()" class="glow p-3 " type="button">Log Out</button>
                        </div>
                    </nav>
             </div>

@@ -1,65 +1,118 @@
-
-<section class="section" id="schedule">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-6 offset-md-3">
-                <div class=" text-center">
-                  <h1 style="text-transform: uppercase; font-weight: 700; color: white;">choose <span style="color: rgb(205, 93, 8);">classes</span></h1>
-                  <img src="../../assets/images/line-dec.png" alt="">
-                  <p style="color: white" class="py-3">Nunc urna sem, laoreet ut metus id, aliquet consequat magna. Sed viverra ipsum dolor, ultricies fermentum massa consequat eu.</p>
-                </div>
-             </div>
-        </div>
-        <div class="row">
-            <div class="col-lg-12">
-                <div class="filters">
-                    <ul class="schedule-filter">
-                        <li class="active" data-tsfilter="monday">Monday</li>
-                        <li data-tsfilter="tuesday">Tuesday</li>
-                        <li data-tsfilter="wednesday">Wednesday</li>
-                        <li data-tsfilter="thursday">Thursday</li>
-                        <li data-tsfilter="friday">Friday</li>
-                    </ul>
+<section *ngIf="isLogin" class="backg">
+<div  class="blackOut container pt-5 p-4">
+    <div class="mb-5 text-center pt-5">
+        <h1 style="font-weight: 700; color: aqua;" class="display-3 text-uppercase mb-0 pt-5">Working Hours</h1>
+    </div>
+    <div class="tab-class text-center">
+        <ul class="nav nav-pills d-inline-flex justify-content-center bg-dark text-uppercase rounded-pill mb-5">
+            <li class="nav-item">
+                <a class="nav-link rounded-pill text-white active" (click)="sendData('monday')" data-bs-toggle="pill" href="#tab-1">Monday</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link rounded-pill text-white" (click)="sendData('tuesday')" data-bs-toggle="pill" href="#tab-2">Tuesday</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link rounded-pill text-white" data-bs-toggle="pill" (click)="sendData('wednesday')" href="#tab-3">Wednesday</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link rounded-pill text-white" data-bs-toggle="pill" (click)="sendData('thursday')" href="#tab-4">Thursday</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link rounded-pill text-white" data-bs-toggle="pill" (click)="sendData('friday')" href="#tab-5">Friday</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link rounded-pill text-white" data-bs-toggle="pill" (click)="sendData('saturday')" href="#tab-6">Saturday</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link rounded-pill text-white" data-bs-toggle="pill" (click)="sendData('sunday')" href="#tab-7">Sunday</a>
+            </li>
+        </ul>
+        <div class="tab-content">
+            <div  id="tab-1" class="tab-pane fade show p-0 active">
+                <div class="row g-5">
+                    <div *ngFor="let time of timing" class="col-lg-4 col-md-4 col-sm-6">
+                        <div class="bg-dark rounded text-center py-5 px-3">
+                            <h6 class="text-uppercase text-light mb-3">{{time.timeSession}}</h6>
+                            <h5 style="color: red;" class="text-uppercase ">{{time.programName}}</h5>
+                            <p class="text-uppercase text-secondary mb-0">{{time.coach}}</p>
+                        </div>
+                    </div>
+                    
                 </div>
             </div>
-            <div class="col-lg-10 offset-lg-1">
-                <div class="schedule-table filtering">
-                    <table>
-                        <tbody>
-                            <tr>
-                                <td class="day-time">Fitness Class</td>
-                                <td class="monday ts-item show" data-tsmeta="monday">10:00AM - 11:30AM</td>
-                                <td class="tuesday ts-item" data-tsmeta="tuesday">2:00PM - 3:30PM</td>
-                                <td>William G. Stewart</td>
-                            </tr>
-                            <tr>
-                                <td class="day-time">Muscle Training</td>
-                                <td class="friday ts-item" data-tsmeta="friday">10:00AM - 11:30AM</td>
-                                <td class="thursday friday ts-item" data-tsmeta="thursday" data-tsmeta="friday">2:00PM - 3:30PM</td>
-                                <td>Paul D. Newman</td>
-                            </tr>
-                            <tr>
-                                <td class="day-time">Body Building</td>
-                                <td class="tuesday ts-item" data-tsmeta="tuesday">10:00AM - 11:30AM</td>
-                                <td class="monday ts-item show" data-tsmeta="monday">2:00PM - 3:30PM</td>
-                                <td>Boyd C. Harris</td>
-                            </tr>
-                            <tr>
-                                <td class="day-time">Yoga Training Class</td>
-                                <td class="wednesday ts-item" data-tsmeta="wednesday">10:00AM - 11:30AM</td>
-                                <td class="friday ts-item" data-tsmeta="friday">2:00PM - 3:30PM</td>
-                                <td>Hector T. Daigle</td>
-                            </tr>
-                            <tr>
-                                <td class="day-time">Advanced Training</td>
-                                <td class="thursday ts-item" data-tsmeta="thursday">10:00AM - 11:30AM</td>
-                                <td class="wednesday ts-item" data-tsmeta="wednesday">2:00PM - 3:30PM</td>
-                                <td>Bret D. Bowers</td>
-                            </tr>
-                        </tbody>
-                    </table>
+            <div id="tab-2" class="tab-pane fade p-0">
+                <div class="row g-5">
+                    <div *ngFor="let time of timing" class="col-lg-4 col-md-4 col-sm-6">
+                        <div class="bg-dark rounded text-center py-5 px-3">
+                            <h6 class="text-uppercase text-light mb-3">{{time.timeSession}}</h6>
+                            <h5 style="color: red;" class="text-uppercase ">{{time.programName}}</h5>
+                            <p class="text-uppercase text-secondary mb-0">{{time.coach}}</p>
+                        </div>
+                    </div>
+                    </div>
+            </div>
+            <div id="tab-3" class="tab-pane fade p-0">
+                <div class="row g-5">
+                    <div *ngFor="let time of timing" class="col-lg-4 col-md-4 col-sm-6">
+                        <div class="bg-dark rounded text-center py-5 px-3">
+                            <h6 class="text-uppercase text-light mb-3">{{time.timeSession}}</h6>
+                            <h5 style="color: red;" class="text-uppercase ">{{time.programName}}</h5>
+                            <p class="text-uppercase text-secondary mb-0">{{time.coach}}</p>
+                        </div>
+                    </div>
+                    
                 </div>
+            </div>
+            <div id="tab-4" class="tab-pane fade p-0">
+                <div class="row g-5">
+                    <div *ngFor="let time of timing" class="col-lg-4 col-md-4 col-sm-6">
+                        <div class="bg-dark rounded text-center py-5 px-3">
+                            <h6 class="text-uppercase text-light mb-3">{{time.timeSession}}</h6>
+                            <h5 style="color: red;" class="text-uppercase ">{{time.programName}}</h5>
+                            <p class="text-uppercase text-secondary mb-0">{{time.coach}}</p>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+            <div id="tab-5" class="tab-pane fade p-0">
+                <div class="row g-5">
+                    <div *ngFor="let time of timing" class="col-lg-4 col-md-4 col-sm-6">
+                        <div class="bg-dark rounded text-center py-5 px-3">
+                            <h6 class="text-uppercase text-light mb-3">{{time.timeSession}}</h6>
+                            <h5 style="color: red;" class="text-uppercase ">{{time.programName}}</h5>
+                            <p class="text-uppercase text-secondary mb-0">{{time.coach}}</p>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+            <div id="tab-6" class="tab-pane fade p-0">
+                <div class="row g-5">
+                    <div *ngFor="let time of timing" class="col-lg-4 col-md-4 col-sm-6">
+                        <div class="bg-dark rounded text-center py-5 px-3">
+                            <h6 class="text-uppercase text-light mb-3">{{time.timeSession}}</h6>
+                            <h5 style="color: red;" class="text-uppercase ">{{time.programName}}</h5>
+                            <p class="text-uppercase text-secondary mb-0">{{time.coach}}</p>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+            <div id="tab-7" class="tab-pane fade p-0">
+                <div class="row g-5">
+                    <div *ngFor="let time of timing" class="col-lg-4 col-md-4 col-sm-6">
+                        <div class="bg-dark rounded text-center py-5 px-3">
+                            <h6 class="text-uppercase text-light mb-3">{{time.timeSession}}</h6>
+                            <h5 style="color: red;" class="text-uppercase ">{{time.programName}}</h5>
+                            <p class="text-uppercase text-secondary mb-0">{{time.coach}}</p>
+                        </div>
+                    </div>
+                    
             </div>
         </div>
     </div>
+</div>
+</div>
+
 </section>
